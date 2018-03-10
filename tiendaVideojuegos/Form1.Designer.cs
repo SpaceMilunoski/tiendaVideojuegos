@@ -1,4 +1,4 @@
-﻿namespace formPrincipal
+﻿namespace tiendaVideojuegos
 {
     partial class Form1
     {
