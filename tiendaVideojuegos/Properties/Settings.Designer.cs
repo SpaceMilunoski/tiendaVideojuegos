@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace formPrincipal.Properties
+namespace tiendaVideojuegos.Properties
 {
 
 
