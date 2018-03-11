@@ -47,14 +47,14 @@
             this.cbClasificacion = new System.Windows.Forms.ComboBox();
             this.cbGenero = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnAgregarCompradas = new System.Windows.Forms.Button();
+            this.tbPiezascompradas = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnRefrescar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.dgvInicio = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,7 +63,7 @@
             this.gbAlta.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInicio)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -236,8 +236,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.btnAgregarCompradas);
+            this.groupBox1.Controls.Add(this.tbPiezascompradas);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Location = new System.Drawing.Point(382, 30);
             this.groupBox1.Name = "groupBox1";
@@ -246,21 +246,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar piezas";
             // 
-            // button1
+            // btnAgregarCompradas
             // 
-            this.button1.Location = new System.Drawing.Point(133, 42);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAgregarCompradas.Location = new System.Drawing.Point(133, 42);
+            this.btnAgregarCompradas.Name = "btnAgregarCompradas";
+            this.btnAgregarCompradas.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarCompradas.TabIndex = 2;
+            this.btnAgregarCompradas.Text = "Agregar";
+            this.btnAgregarCompradas.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // tbPiezascompradas
             // 
-            this.textBox1.Location = new System.Drawing.Point(10, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.tbPiezascompradas.Location = new System.Drawing.Point(10, 42);
+            this.tbPiezascompradas.Name = "tbPiezascompradas";
+            this.tbPiezascompradas.Size = new System.Drawing.Size(100, 20);
+            this.tbPiezascompradas.TabIndex = 1;
             // 
             // label10
             // 
@@ -273,49 +273,49 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.btnRefrescar);
+            this.panel1.Controls.Add(this.btnEliminar);
+            this.panel1.Controls.Add(this.btnActualizar);
+            this.panel1.Controls.Add(this.dgvInicio);
             this.panel1.Location = new System.Drawing.Point(382, 117);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(333, 198);
             this.panel1.TabIndex = 2;
             // 
-            // button4
+            // btnRefrescar
             // 
-            this.button4.Location = new System.Drawing.Point(36, 160);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Refrescar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnRefrescar.Location = new System.Drawing.Point(36, 160);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(75, 23);
+            this.btnRefrescar.TabIndex = 6;
+            this.btnRefrescar.Text = "Refrescar";
+            this.btnRefrescar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnEliminar
             // 
-            this.button3.Location = new System.Drawing.Point(142, 159);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Eliminar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnEliminar.Location = new System.Drawing.Point(142, 159);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 5;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnActualizar
             // 
-            this.button2.Location = new System.Drawing.Point(232, 159);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Actualizar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnActualizar.Location = new System.Drawing.Point(232, 159);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
+            this.btnActualizar.TabIndex = 4;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvInicio
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(327, 150);
-            this.dataGridView1.TabIndex = 3;
+            this.dgvInicio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInicio.Location = new System.Drawing.Point(3, 3);
+            this.dgvInicio.Name = "dgvInicio";
+            this.dgvInicio.Size = new System.Drawing.Size(327, 150);
+            this.dgvInicio.TabIndex = 3;
             // 
             // menuStrip1
             // 
@@ -375,7 +375,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInicio)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -404,14 +404,14 @@
         private System.Windows.Forms.ComboBox cbGenero;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnAgregarCompradas;
+        private System.Windows.Forms.TextBox tbPiezascompradas;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridView dgvInicio;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnRefrescar;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem;
