@@ -37,15 +37,27 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.tbPiezasComprar = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buquedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dgvVenta = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tbBuscar = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.lbId = new System.Windows.Forms.Label();
+            this.lbTitulo = new System.Windows.Forms.Label();
+            this.lbPiezas = new System.Windows.Forms.Label();
+            this.lbPrecioU = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lbPrecioIva = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVenta)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -70,9 +82,15 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.lbPrecioIva);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.lbPrecioU);
+            this.groupBox1.Controls.Add(this.lbPiezas);
+            this.groupBox1.Controls.Add(this.lbTitulo);
+            this.groupBox1.Controls.Add(this.lbId);
+            this.groupBox1.Controls.Add(this.tbPiezasComprar);
+            this.groupBox1.Controls.Add(this.btnCancelar);
+            this.groupBox1.Controls.Add(this.btnAceptar);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -140,33 +158,37 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Precio con IVA";
             // 
-            // button1
+            // btnAceptar
             // 
-            this.button1.Location = new System.Drawing.Point(10, 214);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Aceptar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAceptar.Location = new System.Drawing.Point(10, 214);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.TabIndex = 6;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnCancelar
             // 
-            this.button2.Location = new System.Drawing.Point(150, 214);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCancelar.Location = new System.Drawing.Point(150, 214);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // tbPiezasComprar
             // 
-            this.textBox1.Location = new System.Drawing.Point(68, 141);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 8;
+            this.tbPiezasComprar.Location = new System.Drawing.Point(68, 141);
+            this.tbPiezasComprar.Name = "tbPiezasComprar";
+            this.tbPiezasComprar.Size = new System.Drawing.Size(100, 20);
+            this.tbPiezasComprar.TabIndex = 8;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnBuscar);
+            this.panel1.Controls.Add(this.tbBuscar);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.dgvVenta);
             this.panel1.Location = new System.Drawing.Point(12, 27);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(383, 253);
@@ -190,6 +212,93 @@
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
+            // dgvVenta
+            // 
+            this.dgvVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVenta.Location = new System.Drawing.Point(3, 100);
+            this.dgvVenta.Name = "dgvVenta";
+            this.dgvVenta.Size = new System.Drawing.Size(377, 150);
+            this.dgvVenta.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(14, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(153, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Ingrese el nombre del producto";
+            // 
+            // tbBuscar
+            // 
+            this.tbBuscar.Location = new System.Drawing.Point(17, 36);
+            this.tbBuscar.Name = "tbBuscar";
+            this.tbBuscar.Size = new System.Drawing.Size(100, 20);
+            this.tbBuscar.TabIndex = 2;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(142, 33);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 3;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // lbId
+            // 
+            this.lbId.AutoSize = true;
+            this.lbId.Location = new System.Drawing.Point(10, 37);
+            this.lbId.Name = "lbId";
+            this.lbId.Size = new System.Drawing.Size(35, 13);
+            this.lbId.TabIndex = 9;
+            this.lbId.Text = "label8";
+            // 
+            // lbTitulo
+            // 
+            this.lbTitulo.AutoSize = true;
+            this.lbTitulo.Location = new System.Drawing.Point(168, 42);
+            this.lbTitulo.Name = "lbTitulo";
+            this.lbTitulo.Size = new System.Drawing.Size(35, 13);
+            this.lbTitulo.TabIndex = 10;
+            this.lbTitulo.Text = "label8";
+            // 
+            // lbPiezas
+            // 
+            this.lbPiezas.AutoSize = true;
+            this.lbPiezas.Location = new System.Drawing.Point(10, 85);
+            this.lbPiezas.Name = "lbPiezas";
+            this.lbPiezas.Size = new System.Drawing.Size(35, 13);
+            this.lbPiezas.TabIndex = 11;
+            this.lbPiezas.Text = "label8";
+            // 
+            // lbPrecioU
+            // 
+            this.lbPrecioU.AutoSize = true;
+            this.lbPrecioU.Location = new System.Drawing.Point(168, 89);
+            this.lbPrecioU.Name = "lbPrecioU";
+            this.lbPrecioU.Size = new System.Drawing.Size(35, 13);
+            this.lbPrecioU.TabIndex = 12;
+            this.lbPrecioU.Text = "label8";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(176, 97);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "label8";
+            // 
+            // lbPrecioIva
+            // 
+            this.lbPrecioIva.AutoSize = true;
+            this.lbPrecioIva.Location = new System.Drawing.Point(105, 195);
+            this.lbPrecioIva.Name = "lbPrecioIva";
+            this.lbPrecioIva.Size = new System.Drawing.Size(35, 13);
+            this.lbPrecioIva.TabIndex = 14;
+            this.lbPrecioIva.Text = "label9";
+            // 
             // Venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,6 +316,9 @@
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVenta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,18 +329,28 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menúToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbPiezasComprar;
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buquedaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox tbBuscar;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridView dgvVenta;
+        private System.Windows.Forms.Label lbPrecioIva;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbPrecioU;
+        private System.Windows.Forms.Label lbPiezas;
+        private System.Windows.Forms.Label lbTitulo;
+        private System.Windows.Forms.Label lbId;
     }
 }
