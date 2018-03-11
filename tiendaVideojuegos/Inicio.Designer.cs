@@ -1,6 +1,6 @@
 ﻿namespace tiendaVideojuegos
 {
-    partial class Form1
+    partial class Inicio
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -47,14 +47,14 @@
             this.cbClasificacion = new System.Windows.Forms.ComboBox();
             this.cbGenero = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -246,6 +246,31 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar piezas";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(133, 42);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Agregar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(10, 42);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(7, 26);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(150, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Ingrese las piezas que compro";
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.button4);
@@ -257,47 +282,14 @@
             this.panel1.Size = new System.Drawing.Size(333, 198);
             this.panel1.TabIndex = 2;
             // 
-            // dataGridView1
+            // button4
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(327, 150);
-            this.dataGridView1.TabIndex = 3;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(7, 26);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(150, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Ingrese las piezas que compro";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(10, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(133, 42);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(232, 159);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Actualizar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button4.Location = new System.Drawing.Point(36, 160);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "Refrescar";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -308,14 +300,22 @@
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // button2
             // 
-            this.button4.Location = new System.Drawing.Point(36, 160);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Refrescar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button2.Location = new System.Drawing.Point(232, 159);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Actualizar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(327, 150);
+            this.dataGridView1.TabIndex = 3;
             // 
             // menuStrip1
             // 
@@ -340,22 +340,22 @@
             // buscarToolStripMenuItem
             // 
             this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.buscarToolStripMenuItem.Text = "Buscar";
             // 
             // venderToolStripMenuItem
             // 
             this.venderToolStripMenuItem.Name = "venderToolStripMenuItem";
-            this.venderToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.venderToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.venderToolStripMenuItem.Text = "Vender";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
-            // Form1
+            // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -365,7 +365,9 @@
             this.Controls.Add(this.gbAlta);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.MaximumSize = new System.Drawing.Size(743, 366);
+            this.MinimumSize = new System.Drawing.Size(743, 366);
+            this.Name = "Inicio";
             this.Text = "Form1";
             this.gbAlta.ResumeLayout(false);
             this.gbAlta.PerformLayout();
