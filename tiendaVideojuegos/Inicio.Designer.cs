@@ -334,8 +334,8 @@
             this.venderToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.archivoToolStripMenuItem.Text = "Archivo";
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.archivoToolStripMenuItem.Text = "Menú";
             // 
             // buscarToolStripMenuItem
             // 
