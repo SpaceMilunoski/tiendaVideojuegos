@@ -16,5 +16,28 @@ namespace tiendaVideojuegos
         {
             InitializeComponent();
         }
+
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Inicio inicio = new Inicio();
+            inicio.Show();
+            this.Close();
+        }
+
+        private void ventaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Venta venta = new Venta();
+            venta.Show();
+            this.Close();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e) {
+            dgvBusqueda.DataSource = Conexion.llenado("SELECT * FROM `inventario` WHERE `titulo` LIKE '%" + tbProducto.Text + "%';");
+        }
     }
 }

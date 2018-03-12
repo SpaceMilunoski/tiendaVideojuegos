@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.tbProducto = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.tbProducto = new System.Windows.Forms.TextBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvBusqueda = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -56,13 +56,6 @@
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "Ingrese el nombre del producto a buscar";
             // 
-            // tbProducto
-            // 
-            this.tbProducto.Location = new System.Drawing.Point(6, 35);
-            this.tbProducto.Name = "tbProducto";
-            this.tbProducto.Size = new System.Drawing.Size(100, 20);
-            this.tbProducto.TabIndex = 0;
-            // 
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(143, 33);
@@ -71,6 +64,14 @@
             this.btnBuscar.TabIndex = 1;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // tbProducto
+            // 
+            this.tbProducto.Location = new System.Drawing.Point(6, 35);
+            this.tbProducto.Name = "tbProducto";
+            this.tbProducto.Size = new System.Drawing.Size(100, 20);
+            this.tbProducto.TabIndex = 0;
             // 
             // panel1
             // 
@@ -113,18 +114,21 @@
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
             this.inicioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.inicioToolStripMenuItem.Text = "Inicio";
+            this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
             // 
             // ventaToolStripMenuItem
             // 
             this.ventaToolStripMenuItem.Name = "ventaToolStripMenuItem";
             this.ventaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ventaToolStripMenuItem.Text = "Venta";
+            this.ventaToolStripMenuItem.Click += new System.EventHandler(this.ventaToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // Busqueda
             // 
