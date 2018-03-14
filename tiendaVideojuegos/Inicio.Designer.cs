@@ -201,10 +201,18 @@
             this.btnAgregar.TabIndex = 16;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // cbUbicacion
             // 
             this.cbUbicacion.FormattingEnabled = true;
+            this.cbUbicacion.Items.AddRange(new object[] {
+            "E1A1",
+            "E1E2",
+            "E2A1",
+            "E2A2",
+            "E3A1",
+            "E3A2"});
             this.cbUbicacion.Location = new System.Drawing.Point(215, 163);
             this.cbUbicacion.Name = "cbUbicacion";
             this.cbUbicacion.Size = new System.Drawing.Size(121, 21);
@@ -213,6 +221,13 @@
             // cbPlataforma
             // 
             this.cbPlataforma.FormattingEnabled = true;
+            this.cbPlataforma.Items.AddRange(new object[] {
+            "Windows",
+            "Linux",
+            "Mac",
+            "X-box",
+            "Playstation",
+            "Nintendo"});
             this.cbPlataforma.Location = new System.Drawing.Point(215, 123);
             this.cbPlataforma.Name = "cbPlataforma";
             this.cbPlataforma.Size = new System.Drawing.Size(121, 21);
@@ -221,6 +236,14 @@
             // cbClasificacion
             // 
             this.cbClasificacion.FormattingEnabled = true;
+            this.cbClasificacion.Items.AddRange(new object[] {
+            "eC",
+            "E",
+            "E+10",
+            "T",
+            "M",
+            "Ao",
+            "RP"});
             this.cbClasificacion.Location = new System.Drawing.Point(6, 163);
             this.cbClasificacion.Name = "cbClasificacion";
             this.cbClasificacion.Size = new System.Drawing.Size(121, 21);
@@ -229,6 +252,11 @@
             // cbGenero
             // 
             this.cbGenero.FormattingEnabled = true;
+            this.cbGenero.Items.AddRange(new object[] {
+            "wargames",
+            "shoter",
+            "rpg",
+            "moba"});
             this.cbGenero.Location = new System.Drawing.Point(6, 123);
             this.cbGenero.Name = "cbGenero";
             this.cbGenero.Size = new System.Drawing.Size(121, 21);
@@ -300,6 +328,7 @@
             this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnActualizar
             // 
@@ -309,6 +338,7 @@
             this.btnActualizar.TabIndex = 4;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // dgvInicio
             // 

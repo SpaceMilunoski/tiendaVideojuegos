@@ -41,7 +41,8 @@ namespace tiendaVideojuegos
         }
         public static void comandos(String query) {
             conectar();
-            consulta = new MySqlCommand(query);
+            consulta = new MySqlCommand(query,conexion);
+            consulta.ExecuteReader();
             desconectar();
         }
     }
