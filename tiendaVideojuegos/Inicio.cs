@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms; 
 namespace tiendaVideojuegos
 {
-    public partial class Inicio : Form
+    public partial class AdminProduct : Form
     {
-        public Inicio()
+        public AdminProduct()
         {
             InitializeComponent();
             
