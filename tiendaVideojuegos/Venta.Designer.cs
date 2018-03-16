@@ -119,11 +119,10 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(437, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(245, 253);
+            this.groupBox1.Size = new System.Drawing.Size(278, 253);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Venta";
-
             // 
             // lbPrecioIva
             // 
@@ -171,6 +170,7 @@
             this.tbPiezasComprar.Name = "tbPiezasComprar";
             this.tbPiezasComprar.Size = new System.Drawing.Size(100, 20);
             this.tbPiezasComprar.TabIndex = 8;
+            this.tbPiezasComprar.TextChanged += new System.EventHandler(this.tbPiezasComprar_TextChanged);
             // 
             // btnCancelar
             // 

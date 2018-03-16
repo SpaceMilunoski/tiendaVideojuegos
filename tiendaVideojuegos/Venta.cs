@@ -53,5 +53,18 @@ namespace tiendaVideojuegos
             lbPiezas.Text= dgvVenta.CurrentRow.Cells[7].Value.ToString();
 
         }
+
+        private void tbPiezasComprar_TextChanged(object sender, EventArgs e) {
+            try {
+                int piezas;
+                Double precio, precioIva;
+                piezas = Convert.ToInt32(tbPiezasComprar.Text);
+                precio = Convert.ToDouble(lbPrecioU.Text);
+                precioIva = (piezas * precio) * 1.16;
+                lbPrecioIva.Text = precioIva.ToString();
+            } catch(Exception ) {
+                lbPrecioIva.Text = "";
+            }
+        }
     }
 }
