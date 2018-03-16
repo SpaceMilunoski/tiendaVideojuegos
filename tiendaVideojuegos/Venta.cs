@@ -27,7 +27,7 @@ namespace tiendaVideojuegos
 
         private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Inicio inicio = new Inicio();
+            AdminProduct inicio = new AdminProduct();
             inicio.Show();
             this.Close();
         }
