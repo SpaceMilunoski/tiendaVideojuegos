@@ -82,21 +82,21 @@
             // inicioToolStripMenuItem
             // 
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.inicioToolStripMenuItem.Text = "Inicio";
             this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
             // 
             // buquedaToolStripMenuItem
             // 
             this.buquedaToolStripMenuItem.Name = "buquedaToolStripMenuItem";
-            this.buquedaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.buquedaToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.buquedaToolStripMenuItem.Text = "Busqueda";
             this.buquedaToolStripMenuItem.Click += new System.EventHandler(this.buquedaToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -121,52 +121,47 @@
             this.groupBox1.Size = new System.Drawing.Size(231, 253);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Venta";
             // 
             // lbPrecioIva
             // 
             this.lbPrecioIva.AutoSize = true;
             this.lbPrecioIva.Location = new System.Drawing.Point(105, 195);
             this.lbPrecioIva.Name = "lbPrecioIva";
-            this.lbPrecioIva.Size = new System.Drawing.Size(35, 13);
+            this.lbPrecioIva.Size = new System.Drawing.Size(0, 13);
             this.lbPrecioIva.TabIndex = 14;
-            this.lbPrecioIva.Text = "label9";
             // 
             // lbPrecioU
             // 
             this.lbPrecioU.AutoSize = true;
             this.lbPrecioU.Location = new System.Drawing.Point(168, 89);
             this.lbPrecioU.Name = "lbPrecioU";
-            this.lbPrecioU.Size = new System.Drawing.Size(35, 13);
+            this.lbPrecioU.Size = new System.Drawing.Size(0, 13);
             this.lbPrecioU.TabIndex = 12;
-            this.lbPrecioU.Text = "label8";
             // 
             // lbPiezas
             // 
             this.lbPiezas.AutoSize = true;
             this.lbPiezas.Location = new System.Drawing.Point(10, 85);
             this.lbPiezas.Name = "lbPiezas";
-            this.lbPiezas.Size = new System.Drawing.Size(35, 13);
+            this.lbPiezas.Size = new System.Drawing.Size(0, 13);
             this.lbPiezas.TabIndex = 11;
-            this.lbPiezas.Text = "label8";
             // 
             // lbTitulo
             // 
             this.lbTitulo.AutoSize = true;
             this.lbTitulo.Location = new System.Drawing.Point(168, 42);
             this.lbTitulo.Name = "lbTitulo";
-            this.lbTitulo.Size = new System.Drawing.Size(35, 13);
+            this.lbTitulo.Size = new System.Drawing.Size(0, 13);
             this.lbTitulo.TabIndex = 10;
-            this.lbTitulo.Text = "label8";
             // 
             // lbId
             // 
             this.lbId.AutoSize = true;
             this.lbId.Location = new System.Drawing.Point(10, 37);
             this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(35, 13);
+            this.lbId.Size = new System.Drawing.Size(0, 13);
             this.lbId.TabIndex = 9;
-            this.lbId.Text = "label8";
             // 
             // tbPiezasComprar
             // 
@@ -192,6 +187,7 @@
             this.btnAceptar.TabIndex = 6;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // label6
             // 
@@ -291,6 +287,7 @@
             this.dgvVenta.Name = "dgvVenta";
             this.dgvVenta.Size = new System.Drawing.Size(377, 150);
             this.dgvVenta.TabIndex = 0;
+            this.dgvVenta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVenta_CellClick);
             // 
             // Venta
             // 

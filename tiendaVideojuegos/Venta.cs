@@ -40,5 +40,18 @@ namespace tiendaVideojuegos
         private void btnBuscar_Click(object sender, EventArgs e) {
             dgvVenta.DataSource = Conexion.llenado("SELECT * FROM `inventario` WHERE `titulo` LIKE '%" + tbBuscar.Text + "%';");
         }
+
+        private void btnAceptar_Click(object sender, EventArgs e) {
+            Conexion.comandos("call tiendavideojuegos.quitarPiezas("+lbId.Text+","+tbPiezasComprar.Text+");");
+            dgvVenta.DataSource = Conexion.llenado("SELECT * FROM `inventario` WHERE `titulo` LIKE '%" + tbBuscar.Text + "%';");
+        }
+
+        private void dgvVenta_CellClick(object sender, DataGridViewCellEventArgs e) {
+            lbId.Text= dgvVenta.CurrentRow.Cells[0].Value.ToString();
+            lbTitulo.Text = dgvVenta.CurrentRow.Cells[1].Value.ToString();
+            lbPrecioU.Text=dgvVenta.CurrentRow.Cells[3].Value.ToString();
+            lbPiezas.Text= dgvVenta.CurrentRow.Cells[7].Value.ToString();
+
+        }
     }
 }

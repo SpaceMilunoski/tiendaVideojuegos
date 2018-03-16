@@ -58,5 +58,9 @@ namespace tiendaVideojuegos
             }
             Conexion.comandos("UPDATE `tiendavideojuegos`.`inventario` SET `titulo` = '" + datos[1] + "', `descripcion` = '" + datos[2] + "', `precio` = '" + datos[3] + "', `genero` = '" + datos[4] + "', `plataforma` = '" + datos[5] + "', `clasificacion` = '" + datos[6] + "', `numexistentes` = '" + datos[7] + "', `ubicacion` = '" + datos[8] + "' WHERE `inventario`.`id` = '" + datos[0] + "'");
         }
+
+        private void btnAgregarCompradas_Click(object sender, EventArgs e) {
+
+        }
     }
 }
