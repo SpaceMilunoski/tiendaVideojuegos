@@ -122,11 +122,8 @@
             this.groupBox1.Size = new System.Drawing.Size(245, 253);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-<<<<<<< HEAD
             this.groupBox1.Text = "Venta";
-=======
-            this.groupBox1.Text = "Datos";
->>>>>>> d9dd903ea627d169992ea78ca5912b8dff320531
+
             // 
             // lbPrecioIva
             // 

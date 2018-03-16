@@ -60,7 +60,9 @@ namespace tiendaVideojuegos
         }
 
         private void btnAgregarCompradas_Click(object sender, EventArgs e) {
-
+            Conexion.comandos("call tiendavideojuegos.agregarPiezas(" + dgvInicio.CurrentRow.Cells[0].Value.ToString() + "," + tbPiezascompradas.Text + ");");
+            tbPiezascompradas.Text = "";
+            dgvInicio.DataSource = Conexion.llenado("select * from inventario;");
         }
     }
 }
