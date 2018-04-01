@@ -40,10 +40,16 @@
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gbProducto = new System.Windows.Forms.GroupBox();
+            this.lbDescripcion = new System.Windows.Forms.Label();
+            this.lbTitulo = new System.Windows.Forms.Label();
+            this.pbPimagen = new System.Windows.Forms.PictureBox();
             this.gbBusqueda.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusqueda)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.gbProducto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPimagen)).BeginInit();
             this.SuspendLayout();
             // 
             // gbBusqueda
@@ -91,8 +97,10 @@
             this.dgvBusqueda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBusqueda.Location = new System.Drawing.Point(3, 6);
             this.dgvBusqueda.Name = "dgvBusqueda";
-            this.dgvBusqueda.Size = new System.Drawing.Size(360, 181);
+            this.dgvBusqueda.Size = new System.Drawing.Size(259, 181);
             this.dgvBusqueda.TabIndex = 2;
+            this.dgvBusqueda.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBusqueda_CellClick);
+            this.dgvBusqueda.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBusqueda_CellContentClick);
             // 
             // menuStrip1
             // 
@@ -135,12 +143,53 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // gbProducto
+            // 
+            this.gbProducto.Controls.Add(this.lbDescripcion);
+            this.gbProducto.Controls.Add(this.lbTitulo);
+            this.gbProducto.Controls.Add(this.pbPimagen);
+            this.gbProducto.Location = new System.Drawing.Point(415, 40);
+            this.gbProducto.Name = "gbProducto";
+            this.gbProducto.Size = new System.Drawing.Size(285, 275);
+            this.gbProducto.TabIndex = 3;
+            this.gbProducto.TabStop = false;
+            this.gbProducto.Text = "Producto";
+            // 
+            // lbDescripcion
+            // 
+            this.lbDescripcion.AutoSize = true;
+            this.lbDescripcion.Location = new System.Drawing.Point(20, 194);
+            this.lbDescripcion.Name = "lbDescripcion";
+            this.lbDescripcion.Size = new System.Drawing.Size(63, 13);
+            this.lbDescripcion.TabIndex = 2;
+            this.lbDescripcion.Text = "Descripcion";
+            // 
+            // lbTitulo
+            // 
+            this.lbTitulo.AutoSize = true;
+            this.lbTitulo.Location = new System.Drawing.Point(20, 160);
+            this.lbTitulo.Name = "lbTitulo";
+            this.lbTitulo.Size = new System.Drawing.Size(33, 13);
+            this.lbTitulo.TabIndex = 1;
+            this.lbTitulo.Text = "Titulo";
+            // 
+            // pbPimagen
+            // 
+            this.pbPimagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbPimagen.Location = new System.Drawing.Point(61, 19);
+            this.pbPimagen.Name = "pbPimagen";
+            this.pbPimagen.Size = new System.Drawing.Size(173, 125);
+            this.pbPimagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPimagen.TabIndex = 0;
+            this.pbPimagen.TabStop = false;
+            // 
             // Busqueda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(727, 327);
+            this.Controls.Add(this.gbProducto);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.menuStrip1);
@@ -155,6 +204,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusqueda)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.gbProducto.ResumeLayout(false);
+            this.gbProducto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPimagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,5 +225,9 @@
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.GroupBox gbProducto;
+        private System.Windows.Forms.Label lbDescripcion;
+        private System.Windows.Forms.Label lbTitulo;
+        private System.Windows.Forms.PictureBox pbPimagen;
     }
 }

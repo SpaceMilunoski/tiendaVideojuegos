@@ -16,6 +16,7 @@ namespace tiendaVideojuegos
         {
             InitializeComponent();
             dgvVenta.DataSource = Conexion.llenado("SELECT * FROM `inventario` WHERE `titulo` LIKE '%" + tbBuscar.Text + "%';");
+            
         }
 
         private void buquedaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -65,6 +66,10 @@ namespace tiendaVideojuegos
             } catch(Exception ) {
                 lbPrecioIva.Text = "";
             }
+        }
+
+        private void dgvVenta_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+
         }
     }
 }

@@ -1,8 +1,10 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,8 +44,30 @@ namespace tiendaVideojuegos
         }
 
         private void btnAgregar_Click(object sender, EventArgs e) {
-            Conexion.comandos("INSERT INTO `tiendavideojuegos`.`inventario` (`id`, `titulo`, `descripcion`, `precio`, `genero`, `plataforma`, `clasificacion`, `numexistentes`, `ubicacion`) VALUES (NULL, '" + tbTitulo.Text + "', '" + tbDescripcion.Text + "', '" + tbPrecio.Text + "', '" + cbGenero.SelectedItem.ToString() + "', '" + cbPlataforma.SelectedItem.ToString()+ "', '" + cbClasificacion.SelectedItem.ToString() + "', '" + tbPiezas.Text + "', '" + cbUbicacion.SelectedItem.ToString() + "')");
+            Conexion.conectar();
+            byte[] producto = convertirAvatarAByte(tbImagen.Text);
+            MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand();
+            cmd.Connection = Conexion.conexion;
+            cmd.CommandText = "INSERT INTO `tiendavideojuegos`.`inventario` (`id`, `titulo`, `descripcion`, `precio`, `genero`, `plataforma`, `clasificacion`, `numexistentes`, `ubicacion`,`imagen`) VALUES (NULL, '" + tbTitulo.Text + "', '" + tbDescripcion.Text + "', '" + tbPrecio.Text + "', '" + cbGenero.SelectedItem.ToString() + "', '" + cbPlataforma.SelectedItem.ToString() + "', '" + cbClasificacion.SelectedItem.ToString() + "', '" + tbPiezas.Text + "', '" + cbUbicacion.SelectedItem.ToString() + "',@imagen)";
+            cmd.Parameters.Add("@imagen", MySqlDbType.Blob, producto.Length).Value = producto;
+            cmd.ExecuteNonQuery();
+           // Conexion.comandos(cmd.ToString());
+            //Conexion.comandos("INSERT INTO `tiendavideojuegos`.`inventario` (`id`, `titulo`, `descripcion`, `precio`, `genero`, `plataforma`, `clasificacion`, `numexistentes`, `ubicacion`) VALUES (NULL, '" + tbTitulo.Text + "', '" + tbDescripcion.Text + "', '" + tbPrecio.Text + "', '" + cbGenero.SelectedItem.ToString() + "', '" + cbPlataforma.SelectedItem.ToString()+ "', '" + cbClasificacion.SelectedItem.ToString() + "', '" + tbPiezas.Text + "', '" + cbUbicacion.SelectedItem.ToString() + "',"+producto+")");                    
+            //Conexion.comandos("UPDATE usuarios SET Avatar = @avatar WHERE NombreUsuario = '" + tb.Text + "'";
+            //Query.Parameters.Add("@avatar", MySqlDbType.MediumBlob, avatar.Length).Value = avatar;
+            // Query.ExecuteNonQuery();
             dgvInicio.DataSource = Conexion.llenado("select * from inventario;");
+        }
+        public static byte[] convertirAvatarAByte(string filePath) {
+            FileStream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+            BinaryReader reader = new BinaryReader(stream);
+
+            byte[] avatar = reader.ReadBytes((int)stream.Length);
+
+            reader.Close();
+            stream.Close();
+
+            return avatar;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e) {
@@ -63,6 +87,15 @@ namespace tiendaVideojuegos
             Conexion.comandos("call tiendavideojuegos.agregarPiezas(" + dgvInicio.CurrentRow.Cells[0].Value.ToString() + "," + tbPiezascompradas.Text + ");");
             tbPiezascompradas.Text = "";
             dgvInicio.DataSource = Conexion.llenado("select * from inventario;");
+        }
+
+        private void btnImagen_Click(object sender, EventArgs e) {
+            OpenFileDialog directorio = new OpenFileDialog();
+            directorio.Filter = "Archivos .jpg|*.jpg|  Archivos .bmp|*.bmp";
+            if (directorio.ShowDialog() == DialogResult.OK) {
+                tbImagen.Text = directorio.FileName;
+               // pbImagen.Image = Image.FromFile(directorio.FileName);
+            }
         }
     }
 }

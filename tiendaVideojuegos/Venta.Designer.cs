@@ -297,6 +297,7 @@
             this.dgvVenta.Size = new System.Drawing.Size(377, 150);
             this.dgvVenta.TabIndex = 0;
             this.dgvVenta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVenta_CellClick);
+            this.dgvVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVenta_CellContentClick);
             // 
             // Venta
             // 
