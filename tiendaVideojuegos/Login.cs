@@ -14,7 +14,17 @@ namespace tiendaVideojuegos
     {
         public Login()
         {
-            InitializeComponent();            
-        }        
+            InitializeComponent();
+            
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            Usuario usuario = new Usuario();
+            if (usuario.getRol()=="vendedor") {
+                Venta venta = new Venta();
+                venta.Show();
+            }
+        }
     }
 }

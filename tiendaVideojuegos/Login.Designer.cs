@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.gbLogin = new System.Windows.Forms.GroupBox();
-            this.lbError = new System.Windows.Forms.Label();
             this.btnIngresar = new System.Windows.Forms.Button();
-            this.tbPassword = new System.Windows.Forms.TextBox();
+            this.lbError = new System.Windows.Forms.Label();
             this.tbUsuario = new System.Windows.Forms.TextBox();
+            this.tbPassword = new System.Windows.Forms.TextBox();
             this.gbLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,14 +49,6 @@
             this.gbLogin.TabStop = false;
             this.gbLogin.Text = "Login";
             // 
-            // lbError
-            // 
-            this.lbError.AutoSize = true;
-            this.lbError.Location = new System.Drawing.Point(91, 177);
-            this.lbError.Name = "lbError";
-            this.lbError.Size = new System.Drawing.Size(0, 13);
-            this.lbError.TabIndex = 7;
-            // 
             // btnIngresar
             // 
             this.btnIngresar.Location = new System.Drawing.Point(67, 127);
@@ -65,13 +57,15 @@
             this.btnIngresar.TabIndex = 6;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
-            // tbPassword
+            // lbError
             // 
-            this.tbPassword.Location = new System.Drawing.Point(52, 101);
-            this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(100, 20);
-            this.tbPassword.TabIndex = 5;
+            this.lbError.AutoSize = true;
+            this.lbError.Location = new System.Drawing.Point(91, 177);
+            this.lbError.Name = "lbError";
+            this.lbError.Size = new System.Drawing.Size(0, 13);
+            this.lbError.TabIndex = 7;
             // 
             // tbUsuario
             // 
@@ -79,6 +73,13 @@
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.Size = new System.Drawing.Size(100, 20);
             this.tbUsuario.TabIndex = 4;
+            // 
+            // tbPassword
+            // 
+            this.tbPassword.Location = new System.Drawing.Point(52, 101);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(100, 20);
+            this.tbPassword.TabIndex = 5;
             // 
             // Login
             // 
