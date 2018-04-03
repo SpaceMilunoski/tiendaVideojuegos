@@ -12,7 +12,7 @@ namespace tiendaVideojuegos
         static MySqlCommand consulta;
         static DataTable dt;
         static MySqlDataAdapter da;
-       static MySqlConnection conexion;
+       public static MySqlConnection conexion;
        public static void conectar(){
             MySqlConnectionStringBuilder datos = new MySqlConnectionStringBuilder();
             datos.Server = "localhost";
@@ -45,6 +45,7 @@ namespace tiendaVideojuegos
             consulta.ExecuteReader();
             desconectar();
         }
+
         
     }
 }
