@@ -42,11 +42,13 @@
             this.tbDescripcion = new System.Windows.Forms.TextBox();
             this.tbPiezas = new System.Windows.Forms.TextBox();
             this.gbAlta = new System.Windows.Forms.GroupBox();
+            this.btnImagen = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.cbUbicacion = new System.Windows.Forms.ComboBox();
             this.cbPlataforma = new System.Windows.Forms.ComboBox();
             this.cbClasificacion = new System.Windows.Forms.ComboBox();
             this.cbGenero = new System.Windows.Forms.ComboBox();
+            this.tbImagen = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAgregarCompradas = new System.Windows.Forms.Button();
             this.tbPiezascompradas = new System.Windows.Forms.TextBox();
@@ -61,8 +63,6 @@
             this.buscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.venderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnImagen = new System.Windows.Forms.Button();
-            this.tbImagen = new System.Windows.Forms.TextBox();
             this.gbAlta.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -153,7 +153,7 @@
             // 
             this.tbPrecio.Location = new System.Drawing.Point(156, 230);
             this.tbPrecio.Name = "tbPrecio";
-            this.tbPrecio.Size = new System.Drawing.Size(112, 20);
+            this.tbPrecio.Size = new System.Drawing.Size(100, 20);
             this.tbPrecio.TabIndex = 9;
             // 
             // tbDescripcion
@@ -195,10 +195,20 @@
             this.gbAlta.Controls.Add(this.tbImagen);
             this.gbAlta.Location = new System.Drawing.Point(14, 30);
             this.gbAlta.Name = "gbAlta";
-            this.gbAlta.Size = new System.Drawing.Size(307, 298);
+            this.gbAlta.Size = new System.Drawing.Size(307, 308);
             this.gbAlta.TabIndex = 0;
             this.gbAlta.TabStop = false;
             this.gbAlta.Text = "Alta";
+            // 
+            // btnImagen
+            // 
+            this.btnImagen.Location = new System.Drawing.Point(68, 264);
+            this.btnImagen.Name = "btnImagen";
+            this.btnImagen.Size = new System.Drawing.Size(38, 20);
+            this.btnImagen.TabIndex = 17;
+            this.btnImagen.Text = "...";
+            this.btnImagen.UseVisualStyleBackColor = true;
+            this.btnImagen.Click += new System.EventHandler(this.btnImagen_Click);
             // 
             // btnAgregar
             // 
@@ -206,11 +216,7 @@
             this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-<<<<<<< HEAD
-            this.btnAgregar.Location = new System.Drawing.Point(125, 209);
-=======
-            this.btnAgregar.Location = new System.Drawing.Point(97, 256);
->>>>>>> d6b4f1f842672bddb6e147cb2e1d64e6e73f043b
+            this.btnAgregar.Location = new System.Drawing.Point(163, 256);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(93, 37);
             this.btnAgregar.TabIndex = 16;
@@ -231,11 +237,7 @@
             "E3A2"});
             this.cbUbicacion.Location = new System.Drawing.Point(156, 190);
             this.cbUbicacion.Name = "cbUbicacion";
-<<<<<<< HEAD
             this.cbUbicacion.Size = new System.Drawing.Size(100, 21);
-=======
-            this.cbUbicacion.Size = new System.Drawing.Size(112, 21);
->>>>>>> d6b4f1f842672bddb6e147cb2e1d64e6e73f043b
             this.cbUbicacion.TabIndex = 15;
             // 
             // cbPlataforma
@@ -266,11 +268,7 @@
             "RP"});
             this.cbClasificacion.Location = new System.Drawing.Point(156, 150);
             this.cbClasificacion.Name = "cbClasificacion";
-<<<<<<< HEAD
             this.cbClasificacion.Size = new System.Drawing.Size(100, 21);
-=======
-            this.cbClasificacion.Size = new System.Drawing.Size(112, 21);
->>>>>>> d6b4f1f842672bddb6e147cb2e1d64e6e73f043b
             this.cbClasificacion.TabIndex = 13;
             // 
             // cbGenero
@@ -285,6 +283,13 @@
             this.cbGenero.Name = "cbGenero";
             this.cbGenero.Size = new System.Drawing.Size(100, 21);
             this.cbGenero.TabIndex = 12;
+            // 
+            // tbImagen
+            // 
+            this.tbImagen.Location = new System.Drawing.Point(6, 264);
+            this.tbImagen.Name = "tbImagen";
+            this.tbImagen.Size = new System.Drawing.Size(75, 20);
+            this.tbImagen.TabIndex = 18;
             // 
             // groupBox1
             // 
@@ -389,6 +394,7 @@
             this.dgvInicio.Name = "dgvInicio";
             this.dgvInicio.Size = new System.Drawing.Size(498, 150);
             this.dgvInicio.TabIndex = 3;
+            this.dgvInicio.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInicio_CellClick);
             // 
             // menuStrip1
             // 
@@ -431,28 +437,7 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-<<<<<<< HEAD
-            // btnImagen
-            // 
-            this.btnImagen.Location = new System.Drawing.Point(68, 209);
-            this.btnImagen.Name = "btnImagen";
-            this.btnImagen.Size = new System.Drawing.Size(38, 20);
-            this.btnImagen.TabIndex = 17;
-            this.btnImagen.Text = "...";
-            this.btnImagen.UseVisualStyleBackColor = true;
-            this.btnImagen.Click += new System.EventHandler(this.btnImagen_Click);
-            // 
-            // tbImagen
-            // 
-            this.tbImagen.Location = new System.Drawing.Point(6, 209);
-            this.tbImagen.Name = "tbImagen";
-            this.tbImagen.Size = new System.Drawing.Size(75, 20);
-            this.tbImagen.TabIndex = 18;
-            // 
-            // Inicio
-=======
             // AdminProduct
->>>>>>> d6b4f1f842672bddb6e147cb2e1d64e6e73f043b
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

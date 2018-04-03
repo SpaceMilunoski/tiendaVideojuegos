@@ -74,13 +74,30 @@ namespace tiendaVideojuegos
             Conexion.comandos("DELETE FROM `tiendavideojuegos`.`inventario` WHERE `id`='"+dgvInicio.Rows[dgvInicio.CurrentRow.Index].Cells[dgvInicio.CurrentCell.ColumnIndex].Value.ToString() + "'"+";");
             dgvInicio.DataSource = Conexion.llenado("select * from inventario;");
         }
-
+        String imagen = "";
         private void btnActualizar_Click(object sender, EventArgs e) {
+
             String[] datos = new String[10];
             for (int i = 0; i <= dgvInicio.ColumnCount-1; i++) {
                 datos[i] = dgvInicio.CurrentRow.Cells[i].Value.ToString();
             }
-            Conexion.comandos("UPDATE `tiendavideojuegos`.`inventario` SET `titulo` = '" + datos[1] + "', `descripcion` = '" + datos[2] + "', `precio` = '" + datos[3] + "', `genero` = '" + datos[4] + "', `plataforma` = '" + datos[5] + "', `clasificacion` = '" + datos[6] + "', `numexistentes` = '" + datos[7] + "', `ubicacion` = '" + datos[8] + "' WHERE `inventario`.`id` = '" + datos[0] + "'");
+            //Conexion.comandos("UPDATE `tiendavideojuegos`.`inventario` SET `titulo` = '" + datos[1] + "', `descripcion` = '" + datos[2] + "', `precio` = '" + datos[3] + "', `genero` = '" + datos[4] + "', `plataforma` = '" + datos[5] + "', `clasificacion` = '" + datos[6] + "', `numexistentes` = '" + datos[7] + "', `ubicacion` = '" + datos[8] + "', `imagen` = '" + datos[9] + "' WHERE `inventario`.`id` = '" + datos[0] + "';");
+            try
+            {
+                Conexion.conectar();
+                byte[] producto = convertirAvatarAByte(imagen);
+                MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand();
+                cmd.Connection = Conexion.conexion;
+                cmd.CommandText = "UPDATE `tiendavideojuegos`.`inventario` SET `titulo` = '" + datos[1] + "', `descripcion` = '" + datos[2] + "', `precio` = '" + datos[3] + "', `genero` = '" + datos[4] + "', `plataforma` = '" + datos[5] + "', `clasificacion` = '" + datos[6] + "', `numexistentes` = '" + datos[7] + "', `ubicacion` = '" + datos[8] + "', `imagen` = @imagen WHERE `inventario`.`id` = '" + datos[0] + "';";
+                cmd.Parameters.Add("@imagen", MySqlDbType.Blob, producto.Length).Value = producto;
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+                Conexion.comandos("UPDATE `tiendavideojuegos`.`inventario` SET `titulo` = '" + datos[1] + "', `descripcion` = '" + datos[2] + "', `precio` = '" + datos[3] + "', `genero` = '" + datos[4] + "', `plataforma` = '" + datos[5] + "', `clasificacion` = '" + datos[6] + "', `numexistentes` = '" + datos[7] + "', `ubicacion` = '" + datos[8] + "' WHERE `inventario`.`id` = '" + datos[0] + "';");
+            }
+            imagen = "";
+            dgvInicio.DataSource = Conexion.llenado("select * from inventario;");
         }
 
         private void btnAgregarCompradas_Click(object sender, EventArgs e) {
@@ -95,6 +112,22 @@ namespace tiendaVideojuegos
             if (directorio.ShowDialog() == DialogResult.OK) {
                 tbImagen.Text = directorio.FileName;
                // pbImagen.Image = Image.FromFile(directorio.FileName);
+            }
+        }
+
+        private void dgvInicio_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvInicio.CurrentRow== dgvInicio.CurrentRow&&dgvInicio.CurrentCell== dgvInicio.CurrentRow.Cells[9])
+            {
+                OpenFileDialog directorio = new OpenFileDialog();
+                directorio.Filter = "Archivos .jpg|*.jpg|  Archivos .bmp|*.bmp";
+                if (directorio.ShowDialog() == DialogResult.OK)
+                {
+                    //dgvInicio.CurrentRow.Cells[9].Value = directorio.FileName;
+                    imagen = directorio.FileName;
+                    //tbImagen.Text = directorio.FileName;
+                    // pbImagen.Image = Image.FromFile(directorio.FileName);
+                }
             }
         }
     }
