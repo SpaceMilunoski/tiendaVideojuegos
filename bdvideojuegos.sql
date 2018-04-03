@@ -43,6 +43,54 @@ LOCK TABLES `empleados` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `piezasexistentes`
+--
+
+DROP TABLE IF EXISTS `piezasexistentes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `piezasexistentes` (
+  `IDvideojuego` int(11) NOT NULL,
+  `PiezasExistentes` int(11) DEFAULT NULL,
+  PRIMARY KEY (`IDvideojuego`),
+  CONSTRAINT `piezasexistentes_ibfk_1` FOREIGN KEY (`IDvideojuego`) REFERENCES `videojuego` (`IDvideojuego`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piezasexistentes`
+--
+
+LOCK TABLES `piezasexistentes` WRITE;
+/*!40000 ALTER TABLE `piezasexistentes` DISABLE KEYS */;
+/*!40000 ALTER TABLE `piezasexistentes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `plataforma`
+--
+
+DROP TABLE IF EXISTS `plataforma`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `plataforma` (
+  `IDvideojuego` int(11) NOT NULL,
+  `Plataforma` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`IDvideojuego`),
+  CONSTRAINT `plataforma_ibfk_1` FOREIGN KEY (`IDvideojuego`) REFERENCES `videojuego` (`IDvideojuego`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `plataforma`
+--
+
+LOCK TABLES `plataforma` WRITE;
+/*!40000 ALTER TABLE `plataforma` DISABLE KEYS */;
+/*!40000 ALTER TABLE `plataforma` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `registroventas`
 --
 
@@ -72,6 +120,30 @@ LOCK TABLES `registroventas` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `ubicacionfisica`
+--
+
+DROP TABLE IF EXISTS `ubicacionfisica`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ubicacionfisica` (
+  `IDvideojuego` int(11) NOT NULL,
+  `UbicacionFisica` varchar(5) DEFAULT NULL,
+  PRIMARY KEY (`IDvideojuego`),
+  CONSTRAINT `ubicacionfisica_ibfk_1` FOREIGN KEY (`IDvideojuego`) REFERENCES `videojuego` (`IDvideojuego`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ubicacionfisica`
+--
+
+LOCK TABLES `ubicacionfisica` WRITE;
+/*!40000 ALTER TABLE `ubicacionfisica` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ubicacionfisica` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `videojuego`
 --
 
@@ -84,10 +156,7 @@ CREATE TABLE `videojuego` (
   `Descripcion` varchar(100) DEFAULT NULL,
   `Genero` varchar(25) DEFAULT NULL,
   `Clasificacion` varchar(6) DEFAULT NULL,
-  `Plataforma` varchar(20) DEFAULT NULL,
   `Precio` int(11) DEFAULT NULL,
-  `PiezasExistentes` int(11) DEFAULT NULL,
-  `UbicacionFisica` varchar(5) DEFAULT NULL,
   PRIMARY KEY (`IDvideojuego`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -104,32 +173,6 @@ UNLOCK TABLES;
 --
 -- Dumping routines for database 'bdvideojuegos'
 --
-/*!50003 DROP PROCEDURE IF EXISTS `actualizarEmpleado` */;
-/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
-/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
-/*!50003 SET @saved_col_connection = @@collation_connection */ ;
-/*!50003 SET character_set_client  = utf8 */ ;
-/*!50003 SET character_set_results = utf8 */ ;
-/*!50003 SET collation_connection  = utf8_general_ci */ ;
-/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
-DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `actualizarEmpleado`(in id int, in nom varchar(15), in apell varchar(20), in edad int, in usuar varchar(10), in contra varchar(8))
-begin
-	update empleados
-    set IDempleado=id,
-    Nombres=nom,
-    Apellidos=apell,
-    Edad=edad,
-    Usuario=usuar,
-    contrasena=contra
-    where id=IDempleado;
-end ;;
-DELIMITER ;
-/*!50003 SET sql_mode              = @saved_sql_mode */ ;
-/*!50003 SET character_set_client  = @saved_cs_client */ ;
-/*!50003 SET character_set_results = @saved_cs_results */ ;
-/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `actualizarVideojuego` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -140,7 +183,7 @@ DELIMITER ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `actualizarVideojuego`(in id int, in titulo varchar(30), in descrip varchar(100), in gen varchar(25), in clasif varchar(6), in plataf varchar(20), in prec int, in piezasex int, in ubic varchar(5))
+CREATE DEFINER=`root`@`localhost` PROCEDURE `actualizarVideojuego`(in id int, in titulo varchar(30), in descrip varchar(100), in gen varchar(25), in clasif varchar(6), in prec int)
 begin
 	update videojuegos
     set IDvideojuego=id,
@@ -148,30 +191,8 @@ begin
     Descripcion=descrip,
     Genero=gen,
     Clasificacion=clasif,
-    Plataforma=plataf,
-    Precio=prec,
-    PiezasExistentes=piezasex,
-    UbicacionFisica=ubic
+    Precio=prec
     where id=IDvideojuego;
-end ;;
-DELIMITER ;
-/*!50003 SET sql_mode              = @saved_sql_mode */ ;
-/*!50003 SET character_set_client  = @saved_cs_client */ ;
-/*!50003 SET character_set_results = @saved_cs_results */ ;
-/*!50003 SET collation_connection  = @saved_col_connection */ ;
-/*!50003 DROP PROCEDURE IF EXISTS `eliminarEmpleado` */;
-/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
-/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
-/*!50003 SET @saved_col_connection = @@collation_connection */ ;
-/*!50003 SET character_set_client  = utf8 */ ;
-/*!50003 SET character_set_results = utf8 */ ;
-/*!50003 SET collation_connection  = utf8_general_ci */ ;
-/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
-DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `eliminarEmpleado`(in id int)
-begin
-	delete from empleados where IDempleado=id;
 end ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -191,25 +212,6 @@ DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `eliminarVideojuego`(in id int)
 begin
 	delete from videojuego where IDvideojuego=id;
-end ;;
-DELIMITER ;
-/*!50003 SET sql_mode              = @saved_sql_mode */ ;
-/*!50003 SET character_set_client  = @saved_cs_client */ ;
-/*!50003 SET character_set_results = @saved_cs_results */ ;
-/*!50003 SET collation_connection  = @saved_col_connection */ ;
-/*!50003 DROP PROCEDURE IF EXISTS `insertarEmpleado` */;
-/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
-/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
-/*!50003 SET @saved_col_connection = @@collation_connection */ ;
-/*!50003 SET character_set_client  = utf8 */ ;
-/*!50003 SET character_set_results = utf8 */ ;
-/*!50003 SET collation_connection  = utf8_general_ci */ ;
-/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
-DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `insertarEmpleado`(in id int, in nom varchar(15), in apell varchar(20), in edad int, in usuar varchar(10), in contra varchar(8))
-begin
-	insert into empleados values(id, nom, apell, edad, usuar, contra);
 end ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -245,9 +247,9 @@ DELIMITER ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `insertarVideojuego`(in id int, in titulo varchar(30), in descrip varchar(100), in gen varchar(25), in clasif varchar(6), in plataf varchar(20), in prec int, in piezasex int, in ubic varchar(5))
+CREATE DEFINER=`root`@`localhost` PROCEDURE `insertarVideojuego`(in id int, in titulo varchar(30), in descrip varchar(100), in gen varchar(25), in clasif varchar(6), in prec int)
 begin
-	insert into videojuego values(id, titulo, descrip, gen, clasif, plataf, prec, piezasex, ubic);
+	insert into videojuego values(id, titulo, descrip, gen, clasif, prec);
 end ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -264,4 +266,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-22 23:36:59
+-- Dump completed on 2018-04-03 16:32:49
