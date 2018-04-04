@@ -120,6 +120,30 @@ LOCK TABLES `registroventas` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `rol`
+--
+
+DROP TABLE IF EXISTS `rol`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `rol` (
+  `IDempleado` int(11) NOT NULL,
+  `Rol` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`IDempleado`),
+  CONSTRAINT `rol_ibfk_1` FOREIGN KEY (`IDempleado`) REFERENCES `empleados` (`IDempleado`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `rol`
+--
+
+LOCK TABLES `rol` WRITE;
+/*!40000 ALTER TABLE `rol` DISABLE KEYS */;
+/*!40000 ALTER TABLE `rol` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `ubicacionfisica`
 --
 
@@ -266,4 +290,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-03 16:32:49
+-- Dump completed on 2018-04-03 22:05:06
