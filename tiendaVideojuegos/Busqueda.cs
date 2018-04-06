@@ -20,9 +20,16 @@ namespace tiendaVideojuegos
 
         private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AdminProduct inicio = new AdminProduct();
-            inicio.Show();
-            this.Close();
+            if (Usuario.getRol() == "administrador")
+            {
+                AdminProduct inicio = new AdminProduct();
+                inicio.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Permisos insuficientes", "Error", MessageBoxButtons.OKCancel);
+            }
         }
 
         private void ventaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -48,8 +55,9 @@ namespace tiendaVideojuegos
         private void dgvBusqueda_CellClick(object sender, DataGridViewCellEventArgs e) {
             Image Nothing = null;
             pbPimagen.Image = Nothing;
-            lbTitulo.Text = dgvBusqueda.CurrentRow.Cells[1].Value.ToString();
-            lbDescripcion.Text = dgvBusqueda.CurrentRow.Cells[3].Value.ToString();
+            lbTitulo.Text ="Título "+ dgvBusqueda.CurrentRow.Cells[1].Value.ToString();
+            lbDescripcion.Text = "Descripcion " + dgvBusqueda.CurrentRow.Cells[2].Value.ToString();
+            lbUbicacion.Text ="Ubicación "+ dgvBusqueda.CurrentRow.Cells[8].Value.ToString();
             try
             {
                
@@ -68,6 +76,11 @@ namespace tiendaVideojuegos
             MemoryStream ms = new MemoryStream(byteArrayIn);
             Image returnImage = Image.FromStream(ms);
             return returnImage;
+        }
+
+        private void tbProducto_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

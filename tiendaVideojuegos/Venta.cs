@@ -47,11 +47,34 @@ namespace tiendaVideojuegos
 
         private void btnBuscar_Click(object sender, EventArgs e) {
             dgvVenta.DataSource = Conexion.llenado("SELECT * FROM `inventario` WHERE `titulo` LIKE '%" + tbBuscar.Text + "%';");
+            tbBuscar.Text = "";
         }
 
         private void btnAceptar_Click(object sender, EventArgs e) {
-            Conexion.comandos("call tiendavideojuegos.quitarPiezas("+lbId.Text+","+tbPiezasComprar.Text+");");
-            dgvVenta.DataSource = Conexion.llenado("SELECT * FROM `inventario` WHERE `titulo` LIKE '%" + tbBuscar.Text + "%';");
+            if (lbId.Text!="")
+            {
+                if (Convert.ToInt32(lbPiezas.Text) >= Convert.ToInt32(tbPiezasComprar.Text))
+                {
+                    Conexion.comandos("call insertarVenta(" + lbId.Text + ", " + Usuario.getId() + ", " + tbPiezasComprar.Text + ");");
+                    dgvVenta.DataSource = Conexion.llenado("SELECT * FROM `inventario` WHERE `titulo` LIKE '%" + tbBuscar.Text + "%';");
+                    tbPiezasComprar.Text = "";
+                    lbId.Text = "";
+                    lbPiezas.Text = "";
+                    lbPrecioIva.Text = "";
+                    lbPrecioU.Text = "";
+                    lbTitulo.Text = "";
+
+                }
+                else
+                {
+                    MessageBox.Show("Piezas insuficientes", "Error");
+                    tbPiezasComprar.Text = "";
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione primero un videojuego", "Error");
+            }
         }
 
         private void dgvVenta_CellClick(object sender, DataGridViewCellEventArgs e) {
@@ -77,6 +100,41 @@ namespace tiendaVideojuegos
 
         private void dgvVenta_CellContentClick(object sender, DataGridViewCellEventArgs e) {
 
+        }
+
+        private void tbPiezasComprar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            tbPiezasComprar.Text = "";
+            lbId.Text = "";
+            lbPiezas.Text = "";
+            lbPrecioIva.Text = "";
+            lbPrecioU.Text = "";
+            lbTitulo.Text = "";
+            
+        }
+
+        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Usuario.cerrarSesion();
+            Login login = new Login();
+            login.Show();
+            this.Close();
         }
     }
 }

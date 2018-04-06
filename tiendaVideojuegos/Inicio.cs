@@ -57,6 +57,18 @@ namespace tiendaVideojuegos
             //Query.Parameters.Add("@avatar", MySqlDbType.MediumBlob, avatar.Length).Value = avatar;
             // Query.ExecuteNonQuery();
             dgvInicio.DataSource = Conexion.llenado("select * from inventario;");
+            tbTitulo.Text = "";
+            tbImagen.Text = "";
+            tbPiezas.Text = "";
+            tbDescripcion.Text = "";
+            tbPrecio.Text = "";
+            Image nula = null;
+            pbImagen.Image = nula;
+            cbClasificacion.Text = "";
+            cbGenero.Text = "";
+            cbPlataforma.Text = "";
+            cbUbicacion.Text = "";
+
         }
         public static byte[] convertirAvatarAByte(string filePath) {
             FileStream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
@@ -111,7 +123,7 @@ namespace tiendaVideojuegos
             directorio.Filter = "Archivos .jpg|*.jpg|  Archivos .bmp|*.bmp";
             if (directorio.ShowDialog() == DialogResult.OK) {
                 tbImagen.Text = directorio.FileName;
-               // pbImagen.Image = Image.FromFile(directorio.FileName);
+                pbImagen.Image = Image.FromFile(directorio.FileName);
             }
         }
 
@@ -129,6 +141,64 @@ namespace tiendaVideojuegos
                     // pbImagen.Image = Image.FromFile(directorio.FileName);
                 }
             }
+        }
+
+        private void tbPiezas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void verVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ventascs ventas = new Ventascs();
+            ventas.Show();
+            this.Close();
+        }
+
+        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Usuario.cerrarSesion();
+            Login login = new Login();
+            login.Show();
+            this.Close();
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Usuarios usuarios = new Usuarios();
+            usuarios.Show();
+            this.Close();
         }
     }
 }

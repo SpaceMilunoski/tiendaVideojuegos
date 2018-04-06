@@ -44,6 +44,8 @@
             this.lbDescripcion = new System.Windows.Forms.Label();
             this.lbTitulo = new System.Windows.Forms.Label();
             this.pbPimagen = new System.Windows.Forms.PictureBox();
+            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lbUbicacion = new System.Windows.Forms.Label();
             this.gbBusqueda.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusqueda)).BeginInit();
@@ -83,6 +85,7 @@
             this.tbProducto.Name = "tbProducto";
             this.tbProducto.Size = new System.Drawing.Size(172, 20);
             this.tbProducto.TabIndex = 0;
+            this.tbProducto.TextChanged += new System.EventHandler(this.tbProducto_TextChanged);
             // 
             // panel1
             // 
@@ -117,6 +120,7 @@
             this.menúToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.inicioToolStripMenuItem,
             this.ventaToolStripMenuItem,
+            this.cerrarSesionToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.menúToolStripMenuItem.Name = "menúToolStripMenuItem";
             this.menúToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
@@ -125,26 +129,27 @@
             // inicioToolStripMenuItem
             // 
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
-            this.inicioToolStripMenuItem.Text = "Inicio";
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.inicioToolStripMenuItem.Text = "Administrador";
             this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
             // 
             // ventaToolStripMenuItem
             // 
             this.ventaToolStripMenuItem.Name = "ventaToolStripMenuItem";
-            this.ventaToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.ventaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ventaToolStripMenuItem.Text = "Venta";
             this.ventaToolStripMenuItem.Click += new System.EventHandler(this.ventaToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // gbProducto
             // 
+            this.gbProducto.Controls.Add(this.lbUbicacion);
             this.gbProducto.Controls.Add(this.lbDescripcion);
             this.gbProducto.Controls.Add(this.lbTitulo);
             this.gbProducto.Controls.Add(this.pbPimagen);
@@ -182,6 +187,21 @@
             this.pbPimagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPimagen.TabIndex = 0;
             this.pbPimagen.TabStop = false;
+            // 
+            // cerrarSesionToolStripMenuItem
+            // 
+            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarSesionToolStripMenuItem.Text = "Cerrar sesion";
+            // 
+            // lbUbicacion
+            // 
+            this.lbUbicacion.AutoSize = true;
+            this.lbUbicacion.Location = new System.Drawing.Point(20, 237);
+            this.lbUbicacion.Name = "lbUbicacion";
+            this.lbUbicacion.Size = new System.Drawing.Size(55, 13);
+            this.lbUbicacion.TabIndex = 3;
+            this.lbUbicacion.Text = "Ubicación";
             // 
             // Busqueda
             // 
@@ -230,5 +250,7 @@
         private System.Windows.Forms.Label lbDescripcion;
         private System.Windows.Forms.Label lbTitulo;
         private System.Windows.Forms.PictureBox pbPimagen;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
+        private System.Windows.Forms.Label lbUbicacion;
     }
 }

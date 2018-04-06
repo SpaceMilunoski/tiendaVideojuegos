@@ -45,6 +45,12 @@ namespace tiendaVideojuegos
         {
             rol = rolI;
         }
+        public static void cerrarSesion()
+        {
+            id = 0;
+            nombre = "";
+            rol = "";
+        }
     }
    
 
