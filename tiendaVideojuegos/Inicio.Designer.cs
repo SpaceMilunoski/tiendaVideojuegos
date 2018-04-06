@@ -63,112 +63,124 @@
             this.buscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.venderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbAlta.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInicio)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 29);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(4, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.Size = new System.Drawing.Size(41, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Titulo";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(153, 214);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(239, 214);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 13);
+            this.label2.Size = new System.Drawing.Size(117, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Precio por unidad:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 68);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(4, 65);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.Size = new System.Drawing.Size(80, 16);
             this.label4.TabIndex = 2;
             this.label4.Text = "Descripción";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 214);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(4, 214);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 13);
+            this.label3.Size = new System.Drawing.Size(121, 16);
             this.label3.TabIndex = 3;
             this.label3.Text = "Numero de piezas:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 174);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(4, 174);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 13);
+            this.label6.Size = new System.Drawing.Size(73, 16);
             this.label6.TabIndex = 4;
             this.label6.Text = "Plataforma";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 134);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(3, 134);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 13);
+            this.label5.Size = new System.Drawing.Size(53, 16);
             this.label5.TabIndex = 5;
             this.label5.Text = "Genero";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(154, 173);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(240, 173);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 13);
+            this.label8.Size = new System.Drawing.Size(108, 16);
             this.label8.TabIndex = 6;
             this.label8.Text = "Ubicación FIsica";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(154, 134);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(240, 134);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 13);
+            this.label7.Size = new System.Drawing.Size(84, 16);
             this.label7.TabIndex = 7;
             this.label7.Text = "Clasificación";
             // 
             // tbTitulo
             // 
-            this.tbTitulo.Location = new System.Drawing.Point(6, 45);
+            this.tbTitulo.Location = new System.Drawing.Point(6, 43);
             this.tbTitulo.Name = "tbTitulo";
-            this.tbTitulo.Size = new System.Drawing.Size(263, 20);
+            this.tbTitulo.Size = new System.Drawing.Size(294, 22);
             this.tbTitulo.TabIndex = 8;
             // 
             // tbPrecio
             // 
-            this.tbPrecio.Location = new System.Drawing.Point(156, 230);
+            this.tbPrecio.Location = new System.Drawing.Point(242, 230);
             this.tbPrecio.Name = "tbPrecio";
-            this.tbPrecio.Size = new System.Drawing.Size(100, 20);
+            this.tbPrecio.Size = new System.Drawing.Size(209, 22);
             this.tbPrecio.TabIndex = 9;
             // 
             // tbDescripcion
             // 
-            this.tbDescripcion.Location = new System.Drawing.Point(6, 84);
+            this.tbDescripcion.Location = new System.Drawing.Point(7, 84);
             this.tbDescripcion.Multiline = true;
             this.tbDescripcion.Name = "tbDescripcion";
-            this.tbDescripcion.Size = new System.Drawing.Size(263, 47);
+            this.tbDescripcion.Size = new System.Drawing.Size(445, 47);
             this.tbDescripcion.TabIndex = 10;
             // 
             // tbPiezas
             // 
-            this.tbPiezas.Location = new System.Drawing.Point(6, 230);
+            this.tbPiezas.Location = new System.Drawing.Point(7, 230);
             this.tbPiezas.Name = "tbPiezas";
-            this.tbPiezas.Size = new System.Drawing.Size(100, 20);
+            this.tbPiezas.Size = new System.Drawing.Size(202, 22);
             this.tbPiezas.TabIndex = 11;
             // 
             // gbAlta
@@ -193,18 +205,19 @@
             this.gbAlta.Controls.Add(this.label2);
             this.gbAlta.Controls.Add(this.label1);
             this.gbAlta.Controls.Add(this.tbImagen);
+            this.gbAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbAlta.Location = new System.Drawing.Point(14, 30);
             this.gbAlta.Name = "gbAlta";
-            this.gbAlta.Size = new System.Drawing.Size(307, 308);
+            this.gbAlta.Size = new System.Drawing.Size(457, 325);
             this.gbAlta.TabIndex = 0;
             this.gbAlta.TabStop = false;
             this.gbAlta.Text = "Alta";
             // 
             // btnImagen
             // 
-            this.btnImagen.Location = new System.Drawing.Point(68, 264);
+            this.btnImagen.Location = new System.Drawing.Point(172, 272);
             this.btnImagen.Name = "btnImagen";
-            this.btnImagen.Size = new System.Drawing.Size(38, 20);
+            this.btnImagen.Size = new System.Drawing.Size(37, 22);
             this.btnImagen.TabIndex = 17;
             this.btnImagen.Text = "...";
             this.btnImagen.UseVisualStyleBackColor = true;
@@ -216,7 +229,7 @@
             this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.Location = new System.Drawing.Point(163, 256);
+            this.btnAgregar.Location = new System.Drawing.Point(243, 265);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(93, 37);
             this.btnAgregar.TabIndex = 16;
@@ -235,9 +248,9 @@
             "E2A2",
             "E3A1",
             "E3A2"});
-            this.cbUbicacion.Location = new System.Drawing.Point(156, 190);
+            this.cbUbicacion.Location = new System.Drawing.Point(242, 190);
             this.cbUbicacion.Name = "cbUbicacion";
-            this.cbUbicacion.Size = new System.Drawing.Size(100, 21);
+            this.cbUbicacion.Size = new System.Drawing.Size(209, 24);
             this.cbUbicacion.TabIndex = 15;
             // 
             // cbPlataforma
@@ -250,9 +263,9 @@
             "X-box",
             "Playstation",
             "Nintendo"});
-            this.cbPlataforma.Location = new System.Drawing.Point(6, 190);
+            this.cbPlataforma.Location = new System.Drawing.Point(7, 190);
             this.cbPlataforma.Name = "cbPlataforma";
-            this.cbPlataforma.Size = new System.Drawing.Size(100, 21);
+            this.cbPlataforma.Size = new System.Drawing.Size(202, 24);
             this.cbPlataforma.TabIndex = 14;
             // 
             // cbClasificacion
@@ -266,9 +279,9 @@
             "M",
             "Ao",
             "RP"});
-            this.cbClasificacion.Location = new System.Drawing.Point(156, 150);
+            this.cbClasificacion.Location = new System.Drawing.Point(242, 150);
             this.cbClasificacion.Name = "cbClasificacion";
-            this.cbClasificacion.Size = new System.Drawing.Size(100, 21);
+            this.cbClasificacion.Size = new System.Drawing.Size(209, 24);
             this.cbClasificacion.TabIndex = 13;
             // 
             // cbGenero
@@ -279,16 +292,16 @@
             "shoter",
             "rpg",
             "moba"});
-            this.cbGenero.Location = new System.Drawing.Point(6, 150);
+            this.cbGenero.Location = new System.Drawing.Point(7, 150);
             this.cbGenero.Name = "cbGenero";
-            this.cbGenero.Size = new System.Drawing.Size(100, 21);
+            this.cbGenero.Size = new System.Drawing.Size(202, 24);
             this.cbGenero.TabIndex = 12;
             // 
             // tbImagen
             // 
-            this.tbImagen.Location = new System.Drawing.Point(6, 264);
+            this.tbImagen.Location = new System.Drawing.Point(6, 272);
             this.tbImagen.Name = "tbImagen";
-            this.tbImagen.Size = new System.Drawing.Size(75, 20);
+            this.tbImagen.Size = new System.Drawing.Size(160, 22);
             this.tbImagen.TabIndex = 18;
             // 
             // groupBox1
@@ -297,9 +310,10 @@
             this.groupBox1.Controls.Add(this.btnAgregarCompradas);
             this.groupBox1.Controls.Add(this.tbPiezascompradas);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Location = new System.Drawing.Point(14, 344);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(14, 361);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(501, 75);
+            this.groupBox1.Size = new System.Drawing.Size(346, 75);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar piezas";
@@ -309,7 +323,7 @@
             this.btnAgregarCompradas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCompradas.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarCompradas.Image")));
             this.btnAgregarCompradas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarCompradas.Location = new System.Drawing.Point(256, 23);
+            this.btnAgregarCompradas.Location = new System.Drawing.Point(215, 30);
             this.btnAgregarCompradas.Name = "btnAgregarCompradas";
             this.btnAgregarCompradas.Size = new System.Drawing.Size(90, 39);
             this.btnAgregarCompradas.TabIndex = 2;
@@ -322,15 +336,16 @@
             // 
             this.tbPiezascompradas.Location = new System.Drawing.Point(10, 42);
             this.tbPiezascompradas.Name = "tbPiezascompradas";
-            this.tbPiezascompradas.Size = new System.Drawing.Size(180, 20);
+            this.tbPiezascompradas.Size = new System.Drawing.Size(180, 22);
             this.tbPiezascompradas.TabIndex = 1;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(7, 26);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 13);
+            this.label10.Size = new System.Drawing.Size(104, 16);
             this.label10.TabIndex = 0;
             this.label10.Text = "Piezas a añadir:";
             // 
@@ -342,7 +357,7 @@
             this.panel1.Controls.Add(this.dgvInicio);
             this.panel1.Location = new System.Drawing.Point(14, 442);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(504, 198);
+            this.panel1.Size = new System.Drawing.Size(780, 198);
             this.panel1.TabIndex = 2;
             // 
             // btnRefrescar
@@ -392,7 +407,7 @@
             this.dgvInicio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInicio.Location = new System.Drawing.Point(3, 3);
             this.dgvInicio.Name = "dgvInicio";
-            this.dgvInicio.Size = new System.Drawing.Size(498, 150);
+            this.dgvInicio.Size = new System.Drawing.Size(774, 150);
             this.dgvInicio.TabIndex = 3;
             this.dgvInicio.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInicio_CellClick);
             // 
@@ -402,7 +417,7 @@
             this.archivoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(530, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(806, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "mnsMenu1";
             // 
@@ -419,37 +434,60 @@
             // buscarToolStripMenuItem
             // 
             this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.buscarToolStripMenuItem.Text = "Buscar";
             this.buscarToolStripMenuItem.Click += new System.EventHandler(this.buscarToolStripMenuItem_Click);
             // 
             // venderToolStripMenuItem
             // 
             this.venderToolStripMenuItem.Name = "venderToolStripMenuItem";
-            this.venderToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.venderToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.venderToolStripMenuItem.Text = "Vender";
             this.venderToolStripMenuItem.Click += new System.EventHandler(this.venderToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.groupBox2.Controls.Add(this.pictureBox1);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(477, 30);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(317, 325);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Imagen";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(305, 298);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // AdminProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(530, 656);
+            this.ClientSize = new System.Drawing.Size(806, 696);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbAlta);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "AdminProduct";
-            this.Text = "Administrador";
+            this.Text = "Inventario";
             this.gbAlta.ResumeLayout(false);
             this.gbAlta.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -458,6 +496,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvInicio)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -499,6 +539,8 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.Button btnImagen;
         private System.Windows.Forms.TextBox tbImagen;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

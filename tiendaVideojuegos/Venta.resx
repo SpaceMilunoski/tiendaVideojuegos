@@ -120,4 +120,29 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnBuscar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzbo
+        vLKMAAADQklEQVRIS63X/2vNURzH8bPNNtt8nf2gFDHFJvIjIn7Rxm9CZJiNRGny5Rf5Wr5MhvgDlF9m
+        sUW+JSH58hOikES+5Bcp38l3rudrn8+5O/fcs3tvbe963H3O+bzPPfdznC8fJpFIBBF5KMUUbMIpXMYZ
+        7MA0DEB+qH026RVRDMRSXMN3/MEv/Iz/2vJtrEY58vzvyiS1ED3lBFyHKn7gJU6gBduwB214gm9Q3mPM
+        QIH7fZl0XUShxm+gimfYgFK3gZNfjOV4CFVoBBYip867LowZD9vpJQx3E7tDDMJx/IZGaDayDnv0EU2S
+        K1DhIsr8xGyII/gLjcCYUI4r+jBmMXSh4R3mJ+WC0I+/ChV2oTCUZylKcAMaqo2hpFwRc6EJ9xpVoRxL
+        MRn6t3mBfqogilAcapAJ0Qf2qReoIpQniq26j464ogz65SP85FwQWna6OIi+oRxRnIQ2hn1xxUjc1F8/
+        ORdEA/6hA+WhHFFoNmuot8QV1VDDGj85F8S8uP15VIRyRHEaWvzNccVo6KLNT84FUR+31243OJQjCk19
+        XbXHFUPxCl8xyW+QDdEMXRxCSShHFNOhha81rNks26G7D1AdahhC5EMnmAp1qgjliUJL6B504jTElaPw
+        FCroBKr1G4YQM/ER7zA2lGNFH8asgi4eoXNCEDowdOqooFl/FCtRC639lBlLaCO6ABUOIOM+EH0wCWBP
+        mdbkTWMm4jC0uahCNAI6tfyOd0O73x1UuvdCui6MmQo9mQra8Ps793RyaRi1VGqQ3FyIAuyFPZtb7L1M
+        UgvRhNCvVkHru8697yPm4CxUsDQ3jqEd9aF2kl5hzCzo7UIFbSzae/djGdTREugJNXs/Q3n3oa3yeVy2
+        3qPJ76Ozn2ClMeOwE2/hfpE2Grf8AdoHKqE3kla49+UT1qf14VdYhNZzFeZDm4HeMs9BQ6gJtwjaXouc
+        NtoFbYcujUzKkZu8yITQiTUEFdAbZfANhdAc0Vup7dClzpNPnta4JwiNkta6neG+ZOfBL+gJohBroYnp
+        dmp9QWOwcU8RevJ16G7Y7wYb9gZCna+BntDveHOwUW8h9A7WBC0p26n2gOJgg95E6KhcgVvQf4F4D0uY
+        /4yMCCw7RG19AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>50</value>
+  </metadata>
 </root>

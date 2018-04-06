@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Venta));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menúToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,7 +66,7 @@
             this.menúToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(727, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(627, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -117,19 +118,20 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(437, 27);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(15, 312);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(278, 253);
+            this.groupBox1.Size = new System.Drawing.Size(428, 253);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Venta";
+            this.groupBox1.Text = "Detalles de la venta";
             // 
             // lbPrecioIva
             // 
             this.lbPrecioIva.AutoSize = true;
             this.lbPrecioIva.Location = new System.Drawing.Point(105, 195);
             this.lbPrecioIva.Name = "lbPrecioIva";
-            this.lbPrecioIva.Size = new System.Drawing.Size(0, 13);
+            this.lbPrecioIva.Size = new System.Drawing.Size(0, 16);
             this.lbPrecioIva.TabIndex = 14;
             // 
             // lbPrecioU
@@ -137,7 +139,7 @@
             this.lbPrecioU.AutoSize = true;
             this.lbPrecioU.Location = new System.Drawing.Point(168, 89);
             this.lbPrecioU.Name = "lbPrecioU";
-            this.lbPrecioU.Size = new System.Drawing.Size(0, 13);
+            this.lbPrecioU.Size = new System.Drawing.Size(0, 16);
             this.lbPrecioU.TabIndex = 12;
             // 
             // lbPiezas
@@ -145,7 +147,7 @@
             this.lbPiezas.AutoSize = true;
             this.lbPiezas.Location = new System.Drawing.Point(10, 85);
             this.lbPiezas.Name = "lbPiezas";
-            this.lbPiezas.Size = new System.Drawing.Size(0, 13);
+            this.lbPiezas.Size = new System.Drawing.Size(0, 16);
             this.lbPiezas.TabIndex = 11;
             // 
             // lbTitulo
@@ -153,7 +155,7 @@
             this.lbTitulo.AutoSize = true;
             this.lbTitulo.Location = new System.Drawing.Point(168, 42);
             this.lbTitulo.Name = "lbTitulo";
-            this.lbTitulo.Size = new System.Drawing.Size(0, 13);
+            this.lbTitulo.Size = new System.Drawing.Size(0, 16);
             this.lbTitulo.TabIndex = 10;
             // 
             // lbId
@@ -161,14 +163,14 @@
             this.lbId.AutoSize = true;
             this.lbId.Location = new System.Drawing.Point(10, 37);
             this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(0, 13);
+            this.lbId.Size = new System.Drawing.Size(0, 16);
             this.lbId.TabIndex = 9;
             // 
             // tbPiezasComprar
             // 
             this.tbPiezasComprar.Location = new System.Drawing.Point(68, 141);
             this.tbPiezasComprar.Name = "tbPiezasComprar";
-            this.tbPiezasComprar.Size = new System.Drawing.Size(100, 20);
+            this.tbPiezasComprar.Size = new System.Drawing.Size(100, 22);
             this.tbPiezasComprar.TabIndex = 8;
             this.tbPiezasComprar.TextChanged += new System.EventHandler(this.tbPiezasComprar_TextChanged);
             // 
@@ -208,7 +210,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(18, 123);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(207, 13);
+            this.label5.Size = new System.Drawing.Size(304, 16);
             this.label5.TabIndex = 4;
             this.label5.Text = "Ingrese el numero de piezas que comprara";
             // 
@@ -258,43 +260,48 @@
             this.panel1.Controls.Add(this.tbBuscar);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.dgvVenta);
-            this.panel1.Location = new System.Drawing.Point(12, 27);
+            this.panel1.Location = new System.Drawing.Point(12, 36);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(383, 253);
+            this.panel1.Size = new System.Drawing.Size(603, 253);
             this.panel1.TabIndex = 2;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(142, 33);
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(261, 18);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(100, 39);
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // tbBuscar
             // 
-            this.tbBuscar.Location = new System.Drawing.Point(17, 36);
+            this.tbBuscar.Location = new System.Drawing.Point(13, 37);
             this.tbBuscar.Name = "tbBuscar";
-            this.tbBuscar.Size = new System.Drawing.Size(100, 20);
+            this.tbBuscar.Size = new System.Drawing.Size(242, 20);
             this.tbBuscar.TabIndex = 2;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(14, 9);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(10, 18);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(153, 13);
+            this.label7.Size = new System.Drawing.Size(194, 16);
             this.label7.TabIndex = 1;
             this.label7.Text = "Ingrese el nombre del producto";
             // 
             // dgvVenta
             // 
             this.dgvVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVenta.Location = new System.Drawing.Point(3, 100);
+            this.dgvVenta.Location = new System.Drawing.Point(3, 63);
             this.dgvVenta.Name = "dgvVenta";
-            this.dgvVenta.Size = new System.Drawing.Size(377, 150);
+            this.dgvVenta.Size = new System.Drawing.Size(597, 187);
             this.dgvVenta.TabIndex = 0;
             this.dgvVenta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVenta_CellClick);
             this.dgvVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVenta_CellContentClick);
@@ -304,13 +311,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(727, 327);
+            this.ClientSize = new System.Drawing.Size(627, 566);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximumSize = new System.Drawing.Size(743, 366);
-            this.MinimumSize = new System.Drawing.Size(743, 366);
+            this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(0, 366);
             this.Name = "Venta";
             this.Text = "Venta";
             this.menuStrip1.ResumeLayout(false);
