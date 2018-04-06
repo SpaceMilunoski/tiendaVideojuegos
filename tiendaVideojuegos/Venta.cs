@@ -15,7 +15,7 @@ namespace tiendaVideojuegos
         public Venta()
         {
             InitializeComponent();
-            dgvVenta.DataSource = Conexion.llenado("SELECT * FROM `inventario` WHERE `titulo` LIKE '%" + tbBuscar.Text + "%';");
+            dgvVenta.DataSource = Conexion.llenado("SELECT * FROM `inventario`;");
             
         }
 
@@ -28,9 +28,16 @@ namespace tiendaVideojuegos
 
         private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AdminProduct inicio = new AdminProduct();
-            inicio.Show();
-            this.Close();
+            if (Usuario.getRol()=="administrador")
+            {
+                AdminProduct inicio = new AdminProduct();
+                inicio.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Permisos insuficientes", "Error", MessageBoxButtons.OKCancel);
+            }
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)

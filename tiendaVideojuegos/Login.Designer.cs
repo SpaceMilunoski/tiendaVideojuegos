@@ -42,7 +42,7 @@
             this.gbLogin.Controls.Add(this.lbError);
             this.gbLogin.Controls.Add(this.tbUsuario);
             this.gbLogin.Controls.Add(this.tbPassword);
-            this.gbLogin.Location = new System.Drawing.Point(201, 96);
+            this.gbLogin.Location = new System.Drawing.Point(317, 101);
             this.gbLogin.Name = "gbLogin";
             this.gbLogin.Size = new System.Drawing.Size(200, 211);
             this.gbLogin.TabIndex = 0;
@@ -88,6 +88,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gbLogin);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.gbLogin.ResumeLayout(false);
             this.gbLogin.PerformLayout();

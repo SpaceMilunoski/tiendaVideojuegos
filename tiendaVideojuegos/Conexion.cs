@@ -45,6 +45,37 @@ namespace tiendaVideojuegos
             consulta.ExecuteReader();
             desconectar();
         }
+        public static bool Login(String usuario , String pasword)
+        {
+            bool acceso = false;
+            String query;
+            query = "select * from empleados where Usuario = '"+usuario+"';";
+            conectar();
+            consulta = new MySqlCommand(query, conexion);
+            MySqlDataReader reader = consulta.ExecuteReader();
+            //desconectar();
+            if (reader.Read())
+            {
+                if (reader.GetString(4) == usuario && reader.GetString(5) == pasword)
+                {
+                    acceso = true;
+                    Usuario.setId(reader.GetInt32(0));
+                    Usuario.setNombre(reader.GetString(1));
+                    reader.Close();
+                    query = "select Rol from rol where IDempleado = " + Usuario.getId() + ";";
+                    conectar();
+                    consulta = new MySqlCommand(query, conexion);
+                    reader = consulta.ExecuteReader();
+                    //desconectar();
+                    if (reader.Read())
+                    {
+                        Usuario.setRol(reader.GetString(0));
+                        reader.Close();
+                    }
+                }
+            }
+            return acceso;
+        }
 
         
     }

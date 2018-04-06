@@ -46,6 +46,8 @@ namespace tiendaVideojuegos
         }
 
         private void dgvBusqueda_CellClick(object sender, DataGridViewCellEventArgs e) {
+            Image Nothing = null;
+            pbPimagen.Image = Nothing;
             lbTitulo.Text = dgvBusqueda.CurrentRow.Cells[1].Value.ToString();
             lbDescripcion.Text = dgvBusqueda.CurrentRow.Cells[3].Value.ToString();
             try

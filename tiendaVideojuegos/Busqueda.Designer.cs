@@ -197,6 +197,7 @@
             this.MaximumSize = new System.Drawing.Size(743, 366);
             this.MinimumSize = new System.Drawing.Size(743, 366);
             this.Name = "Busqueda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Busqueda";
             this.gbBusqueda.ResumeLayout(false);
             this.gbBusqueda.PerformLayout();

@@ -312,6 +312,7 @@
             this.MaximumSize = new System.Drawing.Size(743, 366);
             this.MinimumSize = new System.Drawing.Size(743, 366);
             this.Name = "Venta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Venta";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -8,42 +8,42 @@ namespace tiendaVideojuegos
 {
     class Usuario
     {
-        int id;
-        String nombre;
-        String rol;
+        static int id;
+        static String nombre;
+        static String rol;
         public Usuario()
         {
 
         }
-        public Usuario(int id,String nombre, String rol)
+        public Usuario(int idI,String nombreI, String rolI)
         {
-            this.id = id;
-            this.nombre = nombre;
-            this.rol = rol;
+            id = idI;
+            nombre = nombreI;
+            rol = rolI;
         }
-        public int getId()
+        public static int getId()
         {
-            return this.id;
+            return id;
         }
-        public void setId(int id)
+        public static void setId(int idI)
         {
-            this.id = id;
+            id = idI;
         }
-        public String getNombre()
+        public static String getNombre()
         {
-            return this.nombre;
+            return nombre;
         }
-        public void setNombre(String nombre)
+        public static void setNombre(String nombreI)
         {
-            this.nombre = nombre;
+            nombre = nombreI;
         }
-        public String getRol()
+        public static String getRol()
         {
-            return this.rol;
+            return rol;
         }
-        public void setId(String rol)
+        public static void setRol(String rolI)
         {
-            this.rol = rol;
+            rol = rolI;
         }
     }
    

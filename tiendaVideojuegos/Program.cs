@@ -17,11 +17,8 @@ namespace tiendaVideojuegos
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Login login = new Login();
+            login.FormClosed +=MainForm_Closed;
             login.Show();
-            //inicio inicio = new Inicio();
-            AdminProduct inicio = new AdminProduct();
-            inicio.FormClosed +=MainForm_Closed;
-            inicio.Show();
             Application.Run();
             
         }
