@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
+using System.Timers;
 
 namespace tiendaVideojuegos
 {
     public partial class Venta : Form
     {
+        int cont = 0;
         public Venta()
         {
             InitializeComponent();
@@ -63,6 +68,34 @@ namespace tiendaVideojuegos
                     lbPrecioIva.Text = "";
                     lbPrecioU.Text = "";
                     lbTitulo.Text = "";
+
+                    cont++;
+                    DateTime fecha = new DateTime();
+
+                    Document document = new Document();
+                    PdfWriter.GetInstance(document, new FileStream("Factura.pdf", FileMode.OpenOrCreate));
+                    document.Open();
+                    document.Add(new Paragraph("SOFTGAME S.A. de S.V."));
+                    document.Add(new Paragraph("Av. Zeus, Col Pri Chacon, Mineral de la Reforma, Hidalgo."));
+                    document.Add(new Paragraph(" "));
+                    document.Add(new Paragraph(""+fecha));
+                    document.Add(new Paragraph(" "));
+                    document.Add(new Paragraph("Ticket No.: "+cont));
+                    document.Add(new Paragraph(" "));
+                    document.Add(new Paragraph("PRODUCTO                   IMPORTE"));
+                    document.Add(new Paragraph(" "));
+                    document.Add(new Paragraph(lbTitulo.Text +"("+tbPiezasComprar+")"+"                 " + lbPrecioU));
+                    document.Add(new Paragraph(" "));
+                    document.Add(new Paragraph("Subtotal:                " + lbPrecioU.Text));
+                    document.Add(new Paragraph("Total:                " + lbPrecioIva.Text));
+                    document.Add(new Paragraph(" "));
+                    document.Add(new Paragraph(" "));
+                    document.Add(new Paragraph(" "));
+                    document.Add(new Paragraph(" "));
+                    document.Add(new Paragraph("Quejas o aclaraciones al numero 01-800-0000-000"));
+                    document.Add(new Paragraph("GRACIAS POR SU VISITA!"));
+                    document.Close();
+                    MessageBox.Show("Se ha creado un reporte!");
 
                 }
                 else

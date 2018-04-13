@@ -320,7 +320,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(14, 361);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(346, 75);
+            this.groupBox1.Size = new System.Drawing.Size(457, 75);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar piezas";
@@ -330,7 +330,7 @@
             this.btnAgregarCompradas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCompradas.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarCompradas.Image")));
             this.btnAgregarCompradas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarCompradas.Location = new System.Drawing.Point(215, 30);
+            this.btnAgregarCompradas.Location = new System.Drawing.Point(331, 25);
             this.btnAgregarCompradas.Name = "btnAgregarCompradas";
             this.btnAgregarCompradas.Size = new System.Drawing.Size(90, 39);
             this.btnAgregarCompradas.TabIndex = 2;
@@ -343,7 +343,7 @@
             // 
             this.tbPiezascompradas.Location = new System.Drawing.Point(10, 42);
             this.tbPiezascompradas.Name = "tbPiezascompradas";
-            this.tbPiezascompradas.Size = new System.Drawing.Size(180, 22);
+            this.tbPiezascompradas.Size = new System.Drawing.Size(199, 22);
             this.tbPiezascompradas.TabIndex = 1;
             // 
             // label10
