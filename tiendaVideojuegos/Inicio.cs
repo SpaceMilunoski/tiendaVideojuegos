@@ -44,6 +44,25 @@ namespace tiendaVideojuegos
         }
 
         private void btnAgregar_Click(object sender, EventArgs e) {
+            if (tbTitulo.Text == null)
+            {
+                MessageBox.Show("El titulo no puede estar vacío!", "Título vacío", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else {
+                if (tbDescripcion == null)
+                {
+                    MessageBox.Show("La descripción no puede estar vacía!", "Descripción vacío", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else {
+                    if (cbGenero == null) {
+                        MessageBox.Show("El titulo no puede estar vacío!", "Título vacío", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        
+                    }
+                }
+            }
             Conexion.conectar();
             byte[] producto = convertirAvatarAByte(tbImagen.Text);
             MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand();
