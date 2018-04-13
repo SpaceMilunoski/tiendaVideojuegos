@@ -65,40 +65,52 @@ namespace tiendaVideojuegos
                     }
                 }
             }
-            Conexion.conectar();
-            byte[] producto = convertirAvatarAByte(tbImagen.Text);
             MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand();
-            cmd.Connection = Conexion.conexion;
-            cmd.CommandText = "INSERT INTO `tiendavideojuegos`.`inventario` (`id`, `titulo`, `descripcion`, `precio`, `genero`, `plataforma`, `clasificacion`, `numexistentes`, `ubicacion`,`imagen`) VALUES (NULL, '" + tbTitulo.Text + "', '" + tbDescripcion.Text + "', '" + tbPrecio.Text + "', '" + cbGenero.SelectedItem.ToString() + "', '" + cbPlataforma.SelectedItem.ToString() + "', '" + cbClasificacion.SelectedItem.ToString() + "', '" + tbPiezas.Text + "', '" + cbUbicacion.SelectedItem.ToString() + "',@imagen)";
-            cmd.Parameters.Add("@imagen", MySqlDbType.Blob, producto.Length).Value = producto;
-            cmd.ExecuteNonQuery();
-           // Conexion.comandos(cmd.ToString());
-            //Conexion.comandos("INSERT INTO `tiendavideojuegos`.`inventario` (`id`, `titulo`, `descripcion`, `precio`, `genero`, `plataforma`, `clasificacion`, `numexistentes`, `ubicacion`) VALUES (NULL, '" + tbTitulo.Text + "', '" + tbDescripcion.Text + "', '" + tbPrecio.Text + "', '" + cbGenero.SelectedItem.ToString() + "', '" + cbPlataforma.SelectedItem.ToString()+ "', '" + cbClasificacion.SelectedItem.ToString() + "', '" + tbPiezas.Text + "', '" + cbUbicacion.SelectedItem.ToString() + "',"+producto+")");                    
-            //Conexion.comandos("UPDATE usuarios SET Avatar = @avatar WHERE NombreUsuario = '" + tb.Text + "'";
-            //Query.Parameters.Add("@avatar", MySqlDbType.MediumBlob, avatar.Length).Value = avatar;
-            // Query.ExecuteNonQuery();
-            dgvInicio.DataSource = Conexion.llenado("select * from inventario;");
-            tbTitulo.Text = "";
-            tbImagen.Text = "";
-            tbPiezas.Text = "";
-            tbDescripcion.Text = "";
-            tbPrecio.Text = "";
-            Image nula = null;
-            pbImagen.Image = nula;
-            cbClasificacion.Text = "";
-            cbGenero.Text = "";
-            cbPlataforma.Text = "";
-            cbUbicacion.Text = "";
+            byte[] producto;
+                Conexion.conectar();
+            if (tbImagen.Text!="")
+            {
+                producto = convertirAvatarAByte(tbImagen.Text);
+            }
+            else
+            {
+                producto = convertirAvatarAByte("C:\\Users\\Juan Daniel\\Pictures\\productos\\vacio.jpg");
+            }
+               
+                cmd.Connection = Conexion.conexion;
+                cmd.CommandText = "INSERT INTO `tiendavideojuegos`.`inventario` (`id`, `titulo`, `descripcion`, `precio`, `genero`, `plataforma`, `clasificacion`, `numexistentes`, `ubicacion`,`imagen`) VALUES (NULL, '" + tbTitulo.Text + "', '" + tbDescripcion.Text + "', '" + tbPrecio.Text + "', '" + cbGenero.SelectedItem.ToString() + "', '" + cbPlataforma.SelectedItem.ToString() + "', '" + cbClasificacion.SelectedItem.ToString() + "', '" + tbPiezas.Text + "', '" + cbUbicacion.SelectedItem.ToString() + "',@imagen)";
+                cmd.Parameters.Add("@imagen", MySqlDbType.Blob, producto.Length).Value = producto;
+                cmd.ExecuteNonQuery();
+                // Conexion.comandos(cmd.ToString());
+                //Conexion.comandos("INSERT INTO `tiendavideojuegos`.`inventario` (`id`, `titulo`, `descripcion`, `precio`, `genero`, `plataforma`, `clasificacion`, `numexistentes`, `ubicacion`) VALUES (NULL, '" + tbTitulo.Text + "', '" + tbDescripcion.Text + "', '" + tbPrecio.Text + "', '" + cbGenero.SelectedItem.ToString() + "', '" + cbPlataforma.SelectedItem.ToString()+ "', '" + cbClasificacion.SelectedItem.ToString() + "', '" + tbPiezas.Text + "', '" + cbUbicacion.SelectedItem.ToString() + "',"+producto+")");                    
+                //Conexion.comandos("UPDATE usuarios SET Avatar = @avatar WHERE NombreUsuario = '" + tb.Text + "'";
+                //Query.Parameters.Add("@avatar", MySqlDbType.MediumBlob, avatar.Length).Value = avatar;
+                // Query.ExecuteNonQuery();
+                dgvInicio.DataSource = Conexion.llenado("select * from inventario;");
+                tbTitulo.Text = "";
+                tbImagen.Text = "";
+                tbPiezas.Text = "";
+                tbDescripcion.Text = "";
+                tbPrecio.Text = "";
+                Image nula = null;
+                pbImagen.Image = nula;
+                cbClasificacion.Text = "";
+                cbGenero.Text = "";
+                cbPlataforma.Text = "";
+                cbUbicacion.Text = "";
+            
+            
 
         }
         public static byte[] convertirAvatarAByte(string filePath) {
-            FileStream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
-            BinaryReader reader = new BinaryReader(stream);
+            byte[] avatar;
+                FileStream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+                BinaryReader reader = new BinaryReader(stream);
 
-            byte[] avatar = reader.ReadBytes((int)stream.Length);
+                avatar = reader.ReadBytes((int)stream.Length);
 
-            reader.Close();
-            stream.Close();
+                reader.Close();
+                stream.Close();
 
             return avatar;
         }

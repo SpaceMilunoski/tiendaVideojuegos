@@ -32,11 +32,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Id3Lib">
-      <HintPath>..\..\..\..\Programas\Librerias\csid3lib-v0.6-src\id3lib\Mp3Lib\bin\Debug\Id3Lib.dll</HintPath>
-    </Reference>
     <Reference Include="itextsharp">
-      <HintPath>..\..\..\..\Programas\Librerias\pdf\itextsharp-dll-core\itextsharp.dll</HintPath>
+      <HintPath>librerias\itextsharp-dll-core\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>librerias\itextsharp-dll-pdfa\itextsharp.pdfa.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
