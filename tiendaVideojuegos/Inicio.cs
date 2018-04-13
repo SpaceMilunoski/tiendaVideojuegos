@@ -59,7 +59,9 @@ namespace tiendaVideojuegos
                     }
                     else
                     {
-                        
+                        if (cbClasificacion==null) {
+                            MessageBox.Show("El titulo no puede estar vacío!", "Título vacío", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
