@@ -156,6 +156,7 @@
             this.tbEdad.Name = "tbEdad";
             this.tbEdad.Size = new System.Drawing.Size(100, 20);
             this.tbEdad.TabIndex = 7;
+            this.tbEdad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbEdad_KeyPress);
             // 
             // label6
             // 
@@ -204,6 +205,7 @@
             this.tbId.Name = "tbId";
             this.tbId.Size = new System.Drawing.Size(100, 20);
             this.tbId.TabIndex = 1;
+            this.tbId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbId_KeyPress);
             // 
             // label1
             // 
@@ -243,21 +245,21 @@
             // administradorToolStripMenuItem
             // 
             this.administradorToolStripMenuItem.Name = "administradorToolStripMenuItem";
-            this.administradorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.administradorToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.administradorToolStripMenuItem.Text = "Administrador";
             this.administradorToolStripMenuItem.Click += new System.EventHandler(this.administradorToolStripMenuItem_Click);
             // 
             // cerrarSesionToolStripMenuItem
             // 
             this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.cerrarSesionToolStripMenuItem.Text = "Cerrar sesion";
             this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
             // dgvUsuario

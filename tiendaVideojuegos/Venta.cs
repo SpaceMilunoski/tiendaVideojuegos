@@ -78,13 +78,13 @@ namespace tiendaVideojuegos
                     document.Add(new Paragraph("SOFTGAME S.A. de S.V."));
                     document.Add(new Paragraph("Av. Zeus, Col Pri Chacon, Mineral de la Reforma, Hidalgo."));
                     document.Add(new Paragraph(" "));
-                    document.Add(new Paragraph(""+fecha));
+                    document.Add(new Paragraph(""+fecha.Date.TimeOfDay.ToString()));
                     document.Add(new Paragraph(" "));
                     document.Add(new Paragraph("Ticket No.: "+cont));
                     document.Add(new Paragraph(" "));
                     document.Add(new Paragraph("PRODUCTO                   IMPORTE"));
                     document.Add(new Paragraph(" "));
-                    document.Add(new Paragraph(lbTitulo.Text +"("+tbPiezasComprar+")"+"                 " + lbPrecioU));
+                    document.Add(new Paragraph(lbTitulo.Text +"("+tbPiezasComprar.Text+")"+"                 " + lbPrecioU.Text));
                     document.Add(new Paragraph(" "));
                     document.Add(new Paragraph("Subtotal:                " + lbPrecioU.Text));
                     document.Add(new Paragraph("Total:                " + lbPrecioIva.Text));

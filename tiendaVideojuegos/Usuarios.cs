@@ -35,8 +35,23 @@ namespace tiendaVideojuegos
 
         private void btnAgregarCompradas_Click(object sender, EventArgs e)
         {
-            Conexion.comandos("call agregarusuario("+tbId.Text+", '"+tbNombre.Text+"', '"+tbApellidos.Text+"', "+tbEdad.Text+", '"+tbUsuario.Text+"', '"+tbPass.Text+"', '"+cbRol.Text+"');");
-            dgvUsuario.DataSource = Conexion.llenado("Select empleados.* , rol.Rol from empleados inner join rol on rol.IDempleado = empleados.IDempleado;");
+
+            if (tbId.Text!=""&&tbApellidos.Text!=""&&tbEdad.Text != ""&&tbNombre.Text != ""&&tbUsuario.Text != ""&&tbPass.Text != "")
+            {
+                if (Conexion.existe(tbUsuario.Text) == false)
+                {
+                    Conexion.comandos("call agregarusuario(" + tbId.Text + ", '" + tbNombre.Text + "', '" + tbApellidos.Text + "', " + tbEdad.Text + ", '" + tbUsuario.Text + "', '" + tbPass.Text + "', '" + cbRol.Text + "');");
+                    dgvUsuario.DataSource = Conexion.llenado("Select empleados.* , rol.Rol from empleados inner join rol on rol.IDempleado = empleados.IDempleado;");
+                }
+                else
+                {
+                    MessageBox.Show("Este usuario ya existe", "Error");
+                }
+            }
+            else
+            {
+                MessageBox.Show("No a llenado todos los campos", "Error");
+            }
         }
 
         private void btnRefrescar_Click(object sender, EventArgs e)
@@ -58,6 +73,38 @@ namespace tiendaVideojuegos
             }
             Conexion.comandos("call tiendavideojuegos.actualizarEmpleado("+datos[0]+ ", '" + datos[1] + "', '" + datos[2] + "'," + datos[3] + ", '" + datos[4] + "', '" + datos[5] + "', '" + datos[6] + "');");
             dgvUsuario.DataSource = Conexion.llenado("Select empleados.* , rol.Rol from empleados inner join rol on rol.IDempleado = empleados.IDempleado;");
+        }
+
+        private void tbId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbEdad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }

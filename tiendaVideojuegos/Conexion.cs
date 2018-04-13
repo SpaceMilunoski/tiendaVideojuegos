@@ -77,6 +77,22 @@ namespace tiendaVideojuegos
             return acceso;
         }
 
-        
+        public static bool existe(String usuario)
+        {
+            bool existente = false;
+            String query;
+            query = "select * from empleados where Usuario = '" + usuario + "';";
+            conectar();
+            consulta = new MySqlCommand(query, conexion);
+            MySqlDataReader reader = consulta.ExecuteReader();
+            //desconectar();
+            if (reader.Read())
+            {
+                existente = true;
+            }
+            return existente;
+        }
+
+
     }
 }

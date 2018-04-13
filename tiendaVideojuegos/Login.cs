@@ -29,7 +29,7 @@ namespace tiendaVideojuegos
                     venta.Show();
                     this.Close();
                 }
-                if (Usuario.getRol() == "administrador")
+                else if (Usuario.getRol() == "administrador")
                 {
                     AdminProduct admin = new AdminProduct();
                     admin.Show();
