@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
@@ -73,29 +74,40 @@ namespace tiendaVideojuegos
                     DateTime fecha = new DateTime();
 
                     Document document = new Document();
-                    PdfWriter.GetInstance(document, new FileStream("Factura.pdf", FileMode.OpenOrCreate));
+                    PdfWriter.GetInstance(document, new FileStream("ticket-"+cont+".pdf", FileMode.OpenOrCreate));
                     document.Open();
-                    document.Add(new Paragraph("SOFTGAME S.A. de S.V."));
-                    document.Add(new Paragraph("Av. Zeus, Col Pri Chacon, Mineral de la Reforma, Hidalgo."));
+                    document.Add(new Paragraph("SOFTGAME S.A. de S.V.", FontFactory.GetFont("ARIAL", 15)));
+                    
+                    iTextSharp.text.Image jpg = iTextSharp.text.Image.GetInstance(@"banner.jpg");
+                    jpg.Alignment = iTextSharp.text.Image.MIDDLE_ALIGN;
+                    document.Add(jpg);
+                    document.Add(new Paragraph("Av. Zeus, Col. Pri Chacon, Mineral de la Reforma, Hidalgo.", FontFactory.GetFont("ARIAL", 13)));
                     document.Add(new Paragraph(" "));
+<<<<<<< HEAD
                     document.Add(new Paragraph(""+DateTime.Now.ToString()));
+=======
+                    document.Add(new Paragraph(""+fecha.Date.TimeOfDay.ToString(), FontFactory.GetFont("ARIAL", 13)));
+>>>>>>> c5896707cb79c9a6cc15f881e95c1253f13bd81f
                     document.Add(new Paragraph(" "));
-                    document.Add(new Paragraph("Ticket No.: "+cont));
+                    document.Add(new Paragraph("Ticket No.: "+cont, FontFactory.GetFont("ARIAL", 13)));
                     document.Add(new Paragraph(" "));
-                    document.Add(new Paragraph("PRODUCTO                   IMPORTE"));
+                    document.Add(new Paragraph("PRODUCTO                             IMPORTE", FontFactory.GetFont("ARIAL", 13)));
                     document.Add(new Paragraph(" "));
-                    document.Add(new Paragraph(lbTitulo.Text +"("+tbPiezasComprar.Text+")"+"                 " + lbPrecioU.Text));
+                    document.Add(new Paragraph(lbTitulo.Text +"("+tbPiezasComprar.Text+")"+"                   " + lbPrecioU.Text, FontFactory.GetFont("ARIAL", 13)));
                     document.Add(new Paragraph(" "));
-                    document.Add(new Paragraph("Subtotal:                " + lbPrecioU.Text));
-                    document.Add(new Paragraph("Total:                " + lbPrecioIva.Text));
-                    document.Add(new Paragraph(" "));
-                    document.Add(new Paragraph(" "));
+                    document.Add(new Paragraph("Subtotal:                " + lbPrecioU.Text, FontFactory.GetFont("ARIAL", 13)));
+                    document.Add(new Paragraph("Total:                " + lbPrecioIva.Text, FontFactory.GetFont("ARIAL", 13)));
                     document.Add(new Paragraph(" "));
                     document.Add(new Paragraph(" "));
-                    document.Add(new Paragraph("Quejas o aclaraciones al numero 01-800-0000-000"));
-                    document.Add(new Paragraph("GRACIAS POR SU VISITA!"));
+                    document.Add(new Paragraph(" "));
+                    document.Add(new Paragraph(" "));
+                    document.Add(new Paragraph("Quejas o aclaraciones al numero 01-800-0000-000", FontFactory.GetFont("ARIAL", 12)));
+                    document.Add(new Paragraph("GRACIAS POR SU VISITA!", FontFactory.GetFont("ARIAL", 15)));
+                    iTextSharp.text.Image banner1 = iTextSharp.text.Image.GetInstance(@"games-banner.jpg");
+                    banner1.Alignment = iTextSharp.text.Image.MIDDLE_ALIGN;
+                    document.Add(banner1);
                     document.Close();
-                    MessageBox.Show("Se ha creado un reporte!");
+                    MessageBox.Show("Se ha generado el ticket de conpra!");
 
                 }
                 else

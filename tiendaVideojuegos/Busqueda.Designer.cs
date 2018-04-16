@@ -58,6 +58,7 @@
             // 
             // gbBusqueda
             // 
+            this.gbBusqueda.BackColor = System.Drawing.Color.Teal;
             this.gbBusqueda.Controls.Add(this.btnBuscar);
             this.gbBusqueda.Controls.Add(this.tbProducto);
             this.gbBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -96,7 +97,7 @@
             this.panel1.Controls.Add(this.dgvBusqueda);
             this.panel1.Location = new System.Drawing.Point(12, 128);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(762, 187);
+            this.panel1.Size = new System.Drawing.Size(762, 194);
             this.panel1.TabIndex = 1;
             // 
             // dgvBusqueda
@@ -223,6 +224,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(786, 650);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbProducto);
