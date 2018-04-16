@@ -78,7 +78,7 @@ namespace tiendaVideojuegos
                     document.Add(new Paragraph("SOFTGAME S.A. de S.V."));
                     document.Add(new Paragraph("Av. Zeus, Col Pri Chacon, Mineral de la Reforma, Hidalgo."));
                     document.Add(new Paragraph(" "));
-                    document.Add(new Paragraph(""+fecha.Date.TimeOfDay.ToString()));
+                    document.Add(new Paragraph(""+DateTime.Now.ToString()));
                     document.Add(new Paragraph(" "));
                     document.Add(new Paragraph("Ticket No.: "+cont));
                     document.Add(new Paragraph(" "));

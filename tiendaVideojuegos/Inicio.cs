@@ -44,39 +44,45 @@ namespace tiendaVideojuegos
         }
 
         private void btnAgregar_Click(object sender, EventArgs e) {
-            if (tbTitulo.Text == null)
+            try
             {
-                MessageBox.Show("El titulo no puede estar vacío!", "Título vacío", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else {
-                if (tbDescripcion == null)
+                if (tbTitulo.Text == null)
                 {
-                    MessageBox.Show("La descripción no puede estar vacía!", "Descripción vacío", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El titulo no puede estar vacío!", "Título vacío", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else {
-                    if (cbGenero == null) {
-                        MessageBox.Show("El titulo no puede estar vacío!", "Título vacío", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    if (tbDescripcion == null)
+                    {
+                        MessageBox.Show("La descripción no puede estar vacía!", "Descripción vacío", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
-                        if (cbClasificacion==null) {
+                        if (cbGenero == null)
+                        {
                             MessageBox.Show("El titulo no puede estar vacío!", "Título vacío", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            if (cbClasificacion == null)
+                            {
+                                MessageBox.Show("El titulo no puede estar vacío!", "Título vacío", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }
-            }
-            MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand();
-            byte[] producto;
+                MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand();
+                byte[] producto;
                 Conexion.conectar();
-            if (tbImagen.Text!="")
-            {
-                producto = convertirAvatarAByte(tbImagen.Text);
-            }
-            else
-            {
-                producto = convertirAvatarAByte("C:\\Users\\Juan Daniel\\Pictures\\productos\\vacio.jpg");
-            }
-               
+                if (tbImagen.Text != "")
+                {
+                    producto = convertirAvatarAByte(tbImagen.Text);
+                }
+                else
+                {
+                    producto = convertirAvatarAByte("C:\\Users\\Juan Daniel\\Pictures\\productos\\vacio.jpg");
+                }
+
                 cmd.Connection = Conexion.conexion;
                 cmd.CommandText = "INSERT INTO `tiendavideojuegos`.`inventario` (`id`, `titulo`, `descripcion`, `precio`, `genero`, `plataforma`, `clasificacion`, `numexistentes`, `ubicacion`,`imagen`) VALUES (NULL, '" + tbTitulo.Text + "', '" + tbDescripcion.Text + "', '" + tbPrecio.Text + "', '" + cbGenero.SelectedItem.ToString() + "', '" + cbPlataforma.SelectedItem.ToString() + "', '" + cbClasificacion.SelectedItem.ToString() + "', '" + tbPiezas.Text + "', '" + cbUbicacion.SelectedItem.ToString() + "',@imagen)";
                 cmd.Parameters.Add("@imagen", MySqlDbType.Blob, producto.Length).Value = producto;
@@ -98,8 +104,12 @@ namespace tiendaVideojuegos
                 cbGenero.Text = "";
                 cbPlataforma.Text = "";
                 cbUbicacion.Text = "";
-            
-            
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Algo no ha salido bien, verifique sus datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
 
         }
         public static byte[] convertirAvatarAByte(string filePath) {
