@@ -97,7 +97,7 @@
             this.panel1.Controls.Add(this.dgvBusqueda);
             this.panel1.Location = new System.Drawing.Point(12, 128);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(762, 187);
+            this.panel1.Size = new System.Drawing.Size(762, 194);
             this.panel1.TabIndex = 1;
             // 
             // dgvBusqueda
