@@ -146,7 +146,7 @@
             // lbPrecioU
             // 
             this.lbPrecioU.AutoSize = true;
-            this.lbPrecioU.Location = new System.Drawing.Point(343, 96);
+            this.lbPrecioU.Location = new System.Drawing.Point(332, 96);
             this.lbPrecioU.Name = "lbPrecioU";
             this.lbPrecioU.Size = new System.Drawing.Size(0, 16);
             this.lbPrecioU.TabIndex = 12;
@@ -154,7 +154,7 @@
             // lbPiezas
             // 
             this.lbPiezas.AutoSize = true;
-            this.lbPiezas.Location = new System.Drawing.Point(56, 92);
+            this.lbPiezas.Location = new System.Drawing.Point(60, 95);
             this.lbPiezas.Name = "lbPiezas";
             this.lbPiezas.Size = new System.Drawing.Size(0, 16);
             this.lbPiezas.TabIndex = 11;
@@ -162,7 +162,7 @@
             // lbTitulo
             // 
             this.lbTitulo.AutoSize = true;
-            this.lbTitulo.Location = new System.Drawing.Point(343, 49);
+            this.lbTitulo.Location = new System.Drawing.Point(349, 46);
             this.lbTitulo.Name = "lbTitulo";
             this.lbTitulo.Size = new System.Drawing.Size(0, 16);
             this.lbTitulo.TabIndex = 10;
@@ -170,7 +170,7 @@
             // lbId
             // 
             this.lbId.AutoSize = true;
-            this.lbId.Location = new System.Drawing.Point(56, 44);
+            this.lbId.Location = new System.Drawing.Point(59, 44);
             this.lbId.Name = "lbId";
             this.lbId.Size = new System.Drawing.Size(0, 16);
             this.lbId.TabIndex = 9;
