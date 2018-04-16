@@ -55,7 +55,6 @@
             this.tbBuscar = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dgvVenta = new System.Windows.Forms.DataGridView();
-            this.cbFacturacion = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -113,8 +112,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.groupBox1.Controls.Add(this.cbFacturacion);
+            this.groupBox1.BackColor = System.Drawing.Color.Teal;
             this.groupBox1.Controls.Add(this.lbPrecioIva);
             this.groupBox1.Controls.Add(this.lbPrecioU);
             this.groupBox1.Controls.Add(this.lbPiezas);
@@ -269,6 +267,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Teal;
             this.panel1.Controls.Add(this.btnBuscar);
             this.panel1.Controls.Add(this.tbBuscar);
             this.panel1.Controls.Add(this.label7);
@@ -319,21 +318,13 @@
             this.dgvVenta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVenta_CellClick);
             this.dgvVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVenta_CellContentClick);
             // 
-            // cbFacturacion
-            // 
-            this.cbFacturacion.AutoSize = true;
-            this.cbFacturacion.Location = new System.Drawing.Point(252, 210);
-            this.cbFacturacion.Name = "cbFacturacion";
-            this.cbFacturacion.Size = new System.Drawing.Size(79, 20);
-            this.cbFacturacion.TabIndex = 15;
-            this.cbFacturacion.Text = "Factura";
-            this.cbFacturacion.UseVisualStyleBackColor = true;
-            // 
             // Venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(627, 595);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
@@ -384,6 +375,5 @@
         private System.Windows.Forms.Label lbTitulo;
         private System.Windows.Forms.Label lbId;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
-        private System.Windows.Forms.CheckBox cbFacturacion;
     }
 }
