@@ -91,7 +91,7 @@ namespace tiendaVideojuegos
                     document.Add(new Paragraph(" "));
                     document.Add(new Paragraph(lbTitulo.Text +"("+tbPiezasComprar.Text+")"+"                 " + lbPrecioU.Text, FontFactory.GetFont("ARIAL", 13)));
                     document.Add(new Paragraph(" "));
-                    document.Add(new Paragraph("Subtotal:                " + lbPrecioU.Text), FontFactory.GetFont("ARIAL", 13));
+                    document.Add(new Paragraph("Subtotal:                " + lbPrecioU.Text, FontFactory.GetFont("ARIAL", 13)));
                     document.Add(new Paragraph("Total:                " + lbPrecioIva.Text, FontFactory.GetFont("ARIAL", 13)));
                     document.Add(new Paragraph(" "));
                     document.Add(new Paragraph(" "));

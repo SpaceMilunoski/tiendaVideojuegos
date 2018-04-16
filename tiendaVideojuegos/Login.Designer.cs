@@ -59,11 +59,12 @@
             // 
             // btnIngresar
             // 
+            this.btnIngresar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnIngresar.Image = ((System.Drawing.Image)(resources.GetObject("btnIngresar.Image")));
             this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnIngresar.Location = new System.Drawing.Point(125, 146);
+            this.btnIngresar.Location = new System.Drawing.Point(123, 146);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(85, 78);
+            this.btnIngresar.Size = new System.Drawing.Size(92, 78);
             this.btnIngresar.TabIndex = 6;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
