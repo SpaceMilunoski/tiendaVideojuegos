@@ -143,13 +143,13 @@ namespace tiendaVideojuegos
                 byte[] producto = convertirAvatarAByte(imagen);
                 MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand();
                 cmd.Connection = Conexion.conexion;
-                cmd.CommandText = "UPDATE `tiendavideojuegos`.`inventario` SET `titulo` = '" + datos[1] + "', `descripcion` = '" + datos[2] + "', `precio` = '" + datos[3] + "', `genero` = '" + datos[4] + "', `plataforma` = '" + datos[5] + "', `clasificacion` = '" + datos[6] + "', `numexistentes` = '" + datos[7] + "', `ubicacion` = '" + datos[8] + "', `imagen` = @imagen WHERE `inventario`.`id` = '" + datos[0] + "';";
+                cmd.CommandText = "UPDATE `tiendavideojuegos`.`inventario` SET `titulo` = '" + tbTitulo.Text + "', `descripcion` = '" + tbDescripcion.Text + "', `precio` = '" + tbPrecio.Text + "', `genero` = '" + cbGenero.Text + "', `plataforma` = '" + cbPlataforma.Text + "', `clasificacion` = '" + cbClasificacion.Text + "', `numexistentes` = '" + tbPiezas.Text + "', `ubicacion` = '" + cbUbicacion + "', `imagen` = @imagen WHERE `inventario`.`id` = '" + dgvInicio.CurrentRow.Cells[0].Value.ToString() + "';";
                 cmd.Parameters.Add("@imagen", MySqlDbType.Blob, producto.Length).Value = producto;
                 cmd.ExecuteNonQuery();
             }
             catch
             {
-                Conexion.comandos("UPDATE `tiendavideojuegos`.`inventario` SET `titulo` = '" + datos[1] + "', `descripcion` = '" + datos[2] + "', `precio` = '" + datos[3] + "', `genero` = '" + datos[4] + "', `plataforma` = '" + datos[5] + "', `clasificacion` = '" + datos[6] + "', `numexistentes` = '" + datos[7] + "', `ubicacion` = '" + datos[8] + "' WHERE `inventario`.`id` = '" + datos[0] + "';");
+                Conexion.comandos("UPDATE `tiendavideojuegos`.`inventario` SET `titulo` = '" + tbTitulo.Text + "', `descripcion` = '" + tbDescripcion.Text + "', `precio` = '" + tbPrecio.Text + "', `genero` = '" + cbGenero.Text + "', `plataforma` = '" + cbPlataforma.Text + "', `clasificacion` = '" + cbClasificacion.Text + "', `numexistentes` = '" + tbPiezas.Text + "', `ubicacion` = '" + cbUbicacion + "' WHERE `inventario`.`id` = '" + dgvInicio.CurrentRow.Cells[0].Value.ToString() + "';");
             }
             imagen = "";
             dgvInicio.DataSource = Conexion.llenado("select * from inventario;");
@@ -184,6 +184,16 @@ namespace tiendaVideojuegos
                     // pbImagen.Image = Image.FromFile(directorio.FileName);
                 }
             }
+            tbDescripcion.Text = dgvInicio.CurrentRow.Cells[2].Value.ToString();
+            tbImagen.Text = "";
+            tbPiezas.Text = dgvInicio.CurrentRow.Cells[7].Value.ToString();
+            tbPrecio.Text = dgvInicio.CurrentRow.Cells[3].Value.ToString();
+            tbTitulo.Text = dgvInicio.CurrentRow.Cells[1].Value.ToString();
+            cbClasificacion.Text = dgvInicio.CurrentRow.Cells[6].Value.ToString();
+            cbGenero.Text = dgvInicio.CurrentRow.Cells[4].Value.ToString();
+            cbPlataforma.Text = dgvInicio.CurrentRow.Cells[5].Value.ToString();
+            cbUbicacion.Text = dgvInicio.CurrentRow.Cells[8].Value.ToString();
+
         }
 
         private void tbPiezas_KeyPress(object sender, KeyPressEventArgs e)

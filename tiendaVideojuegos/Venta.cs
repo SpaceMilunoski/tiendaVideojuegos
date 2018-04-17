@@ -63,12 +63,7 @@ namespace tiendaVideojuegos
                 {
                     Conexion.comandos("call insertarVenta(" + lbId.Text + ", " + Usuario.getId() + ", " + tbPiezasComprar.Text + ");");
                     dgvVenta.DataSource = Conexion.llenado("SELECT * FROM `inventario` WHERE `titulo` LIKE '%" + tbBuscar.Text + "%';");
-                    tbPiezasComprar.Text = "";
-                    lbId.Text = "";
-                    lbPiezas.Text = "";
-                    lbPrecioIva.Text = "";
-                    lbPrecioU.Text = "";
-                    lbTitulo.Text = "";
+                    
 
                     cont++;
                     DateTime fecha = new DateTime();
@@ -83,11 +78,7 @@ namespace tiendaVideojuegos
                     document.Add(jpg);
                     document.Add(new Paragraph("Av. Zeus, Col. Pri Chacon, Mineral de la Reforma, Hidalgo.", FontFactory.GetFont("ARIAL", 13)));
                     document.Add(new Paragraph(" "));
-<<<<<<< HEAD
-                    document.Add(new Paragraph(""+DateTime.Now.ToString()));
-=======
-                    document.Add(new Paragraph(""+fecha.Date.TimeOfDay.ToString(), FontFactory.GetFont("ARIAL", 13)));
->>>>>>> c5896707cb79c9a6cc15f881e95c1253f13bd81f
+                    document.Add(new Paragraph(""+DateTime.Now.ToString(), FontFactory.GetFont("ARIAL", 13)));
                     document.Add(new Paragraph(" "));
                     document.Add(new Paragraph("Ticket No.: "+cont, FontFactory.GetFont("ARIAL", 13)));
                     document.Add(new Paragraph(" "));
@@ -108,7 +99,12 @@ namespace tiendaVideojuegos
                     document.Add(banner1);
                     document.Close();
                     MessageBox.Show("Se ha generado el ticket de conpra!");
-
+                    tbPiezasComprar.Text = "";
+                    lbId.Text = "";
+                    lbPiezas.Text = "";
+                    lbPrecioIva.Text = "";
+                    lbPrecioU.Text = "";
+                    lbTitulo.Text = "";
                 }
                 else
                 {
