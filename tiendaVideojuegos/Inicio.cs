@@ -132,10 +132,7 @@ namespace tiendaVideojuegos
        
         private void btnActualizar_Click(object sender, EventArgs e) {
            
-            String[] datos = new String[10];
-            for (int i = 0; i <= dgvInicio.ColumnCount-1; i++) {
-                datos[i] = dgvInicio.CurrentRow.Cells[i].Value.ToString();
-            }
+            
             //Conexion.comandos("UPDATE `tiendavideojuegos`.`inventario` SET `titulo` = '" + datos[1] + "', `descripcion` = '" + datos[2] + "', `precio` = '" + datos[3] + "', `genero` = '" + datos[4] + "', `plataforma` = '" + datos[5] + "', `clasificacion` = '" + datos[6] + "', `numexistentes` = '" + datos[7] + "', `ubicacion` = '" + datos[8] + "', `imagen` = '" + datos[9] + "' WHERE `inventario`.`id` = '" + datos[0] + "';");
             try
             {
