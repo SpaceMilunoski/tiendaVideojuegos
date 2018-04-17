@@ -131,7 +131,7 @@ namespace tiendaVideojuegos
         }
        
         private void btnActualizar_Click(object sender, EventArgs e) {
-
+           
             String[] datos = new String[10];
             for (int i = 0; i <= dgvInicio.ColumnCount-1; i++) {
                 datos[i] = dgvInicio.CurrentRow.Cells[i].Value.ToString();
@@ -153,6 +153,17 @@ namespace tiendaVideojuegos
             }
             
             dgvInicio.DataSource = Conexion.llenado("select * from inventario;");
+            btnAgregar.Enabled = true;
+            btnActualizar.Enabled = false;
+            tbImagen.Text = "";
+            tbDescripcion.Text = "";
+            tbPiezas.Text = "";
+            tbPrecio.Text = "";
+            tbTitulo.Text = "";
+            cbClasificacion.Text = "";
+            cbGenero.Text = "";
+            cbPlataforma.Text = "";
+            cbUbicacion.Text = "";
         }
 
         private void btnAgregarCompradas_Click(object sender, EventArgs e) {
@@ -172,7 +183,8 @@ namespace tiendaVideojuegos
 
         private void dgvInicio_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            btnAgregar.Enabled = false;
+            btnActualizar.Enabled = true;
             tbDescripcion.Text = dgvInicio.CurrentRow.Cells[2].Value.ToString();
             tbImagen.Text = "";
             tbPiezas.Text = dgvInicio.CurrentRow.Cells[7].Value.ToString();
@@ -268,6 +280,8 @@ namespace tiendaVideojuegos
             cbUbicacion.Text = "";
             Image imagen = null;
             pbImagen.Image = imagen;
+            btnActualizar.Enabled = false;
+            btnAgregar.Enabled = true;
         }
     }
 }
