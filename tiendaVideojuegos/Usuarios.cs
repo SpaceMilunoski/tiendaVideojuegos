@@ -50,7 +50,7 @@ namespace tiendaVideojuegos
             }
             else
             {
-                MessageBox.Show("No a llenado todos los campos", "Error");
+                MessageBox.Show("No ha llenado todos los campos", "Error");
             }
         }
 
