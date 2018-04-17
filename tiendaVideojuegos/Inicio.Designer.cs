@@ -68,6 +68,7 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pbImagen = new System.Windows.Forms.PictureBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.gbAlta.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -191,8 +192,10 @@
             // gbAlta
             // 
             this.gbAlta.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.gbAlta.Controls.Add(this.btnCancelar);
             this.gbAlta.Controls.Add(this.btnImagen);
             this.gbAlta.Controls.Add(this.btnAgregar);
+            this.gbAlta.Controls.Add(this.btnActualizar);
             this.gbAlta.Controls.Add(this.cbUbicacion);
             this.gbAlta.Controls.Add(this.cbPlataforma);
             this.gbAlta.Controls.Add(this.cbClasificacion);
@@ -213,7 +216,7 @@
             this.gbAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbAlta.Location = new System.Drawing.Point(14, 30);
             this.gbAlta.Name = "gbAlta";
-            this.gbAlta.Size = new System.Drawing.Size(457, 325);
+            this.gbAlta.Size = new System.Drawing.Size(532, 325);
             this.gbAlta.TabIndex = 0;
             this.gbAlta.TabStop = false;
             this.gbAlta.Text = "Alta";
@@ -234,9 +237,9 @@
             this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.Location = new System.Drawing.Point(243, 265);
+            this.btnAgregar.Location = new System.Drawing.Point(215, 265);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(93, 37);
+            this.btnAgregar.Size = new System.Drawing.Size(92, 37);
             this.btnAgregar.TabIndex = 16;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -360,7 +363,6 @@
             // 
             this.panel1.Controls.Add(this.btnRefrescar);
             this.panel1.Controls.Add(this.btnEliminar);
-            this.panel1.Controls.Add(this.btnActualizar);
             this.panel1.Controls.Add(this.dgvInicio);
             this.panel1.Location = new System.Drawing.Point(14, 442);
             this.panel1.Name = "panel1";
@@ -400,9 +402,9 @@
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
             this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizar.Location = new System.Drawing.Point(387, 156);
+            this.btnActualizar.Location = new System.Drawing.Point(314, 266);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(105, 36);
+            this.btnActualizar.Size = new System.Drawing.Size(107, 36);
             this.btnActualizar.TabIndex = 4;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -424,7 +426,7 @@
             this.archivoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(806, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(859, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "mnsMenu1";
             // 
@@ -488,9 +490,9 @@
             this.groupBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.groupBox2.Controls.Add(this.pbImagen);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(477, 30);
+            this.groupBox2.Location = new System.Drawing.Point(552, 30);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(317, 325);
+            this.groupBox2.Size = new System.Drawing.Size(304, 325);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Imagen";
@@ -505,13 +507,23 @@
             this.pbImagen.TabIndex = 0;
             this.pbImagen.TabStop = false;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(427, 266);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(99, 36);
+            this.btnCancelar.TabIndex = 19;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // AdminProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(806, 673);
+            this.ClientSize = new System.Drawing.Size(859, 673);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
@@ -577,6 +589,7 @@
         private System.Windows.Forms.ToolStripMenuItem verVentasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
 
